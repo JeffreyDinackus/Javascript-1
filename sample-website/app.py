@@ -9,7 +9,7 @@ app = Flask(__name__)
 #
 # class Todo(db.Model):
 #     id = db.Column(db.Integer, primary_key=True)
-#this function tells SQL how to handle printing informatio when asked. 
+#this function tells SQL how to handle printing informatio when asked, from the CLI
 #     def __repr__(self):
 #         return 'self.id'
 
