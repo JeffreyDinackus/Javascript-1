@@ -4,7 +4,7 @@
  * frequently used characters. It requires Node 12 or higher to run.
  *
  * In a Unix-type environment you can invoke the program like this:
- *    node charfreq.js < corpus.txt
+ *    node charfreq.js < readme.txt
  */
 
 // This class extends Map so that the get() method returns the specified
