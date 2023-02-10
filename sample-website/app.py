@@ -27,5 +27,21 @@ def index():
 def about():
     return render_template('about.html')
 
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')
+
+@app.route('/youtube')
+def youtube():
+    return render_template('youtube.html')
+
+@app.route('/resources')
+def resources():
+    return render_template('resources.html')
+
+@app.route('/code')
+def code():
+    return render_template('code.html')
+
 if __name__ == "__main__":
     app.run(debug=True)
