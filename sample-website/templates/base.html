@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    {%block title %}{% endblock %}
-    {% block head %}{% endblock %}
+    <!-- this syntax is called jinga 2 syntax, it is covered in the video in app.py in the first 15 minutes. It is simply syntax. When you have a block, this is a place where you can put stuff into the page on other pages, it is like a varaible. The other pages extend the base.html -->
+    {%block title %}{% endblock %} {% block head %}{% endblock %}
     <link
       rel="stylesheet"
       href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}"
@@ -21,7 +21,7 @@
       aria-label="Offcanvas navbar large"
     >
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">put logo here</a>
+        <a class="navbar-brand" href="/">put logo here</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -51,31 +51,14 @@
           <div class="offcanvas-body">
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href="/youtube">YouTube</a>
               </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Dropdown
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li>
-                    <hr class="dropdown-divider" />
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </li>
-                </ul>
+              <li class="nav-item">
+                <a class="nav-link" href="/about">About</a>
+              </li>
               </li>
             </ul>
             <form class="d-flex mt-3 mt-lg-0" role="search">
@@ -98,7 +81,7 @@
       <footer
         class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"
       >
-        <p class="col-md-4 mb-0 text-light">&copy; 2022 Company, Inc</p>
+        <p class="col-md-4 mb-0 text-light">&copy; 2023 Juice Media</p>
 
         <a
           href="/"
@@ -111,10 +94,10 @@
 
         <ul class="nav col-md-4 justify-content-end">
           <li class="nav-item">
-            <a href="#" class="nav-link px-2 text-light">Home</a>
+            <a href="/" class="nav-link px-2 text-light">Home</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link px-2 text-light">Features</a>
+            <a href="/about" class="nav-link px-2 text-light">About</a>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link px-2 text-light">Pricing</a>
