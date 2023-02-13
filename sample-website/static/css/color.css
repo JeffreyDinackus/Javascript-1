@@ -1,0 +1,10 @@
+body {
+  background-color: black;
+  color: white;
+}
+
+input {
+  style="color: red; 
+  border-color: purple; 
+  background-color: #1a1a1d"
+}
