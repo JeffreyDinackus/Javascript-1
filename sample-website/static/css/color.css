@@ -2,9 +2,8 @@ body {
   background-color: black;
   color: white;
 }
-
-input {
-  color: red; 
-  border-color: purple; 
-  background-color: #1a1a1d"
+.color-for-form {
+  color: red;
+  border-color: purple;
+  background-color: #1a1a1d;
 }
