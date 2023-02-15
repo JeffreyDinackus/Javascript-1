@@ -2,7 +2,7 @@
 %}{% block head %} {% endblock %} {% block content %}
 
 <div class="container">
-  <h1 class="text-center">About us</h1>
+  <h1 class="text-center my-5">About us</h1>
   <p>
     Currently this website is operated by one man. This websites mission is to
     spread the knowledge that he has acquired so that others may benefit from it
@@ -11,7 +11,65 @@
     eyes be opened but to not believe, there is an increasingly high number of
     people who are in this category. These people are sometimes called or call
     themselves &quot;truthers.&quot; I hope that you make use of this website,
-    and it inspires you to believe in the Lord Jesus Christ.
+    and the content provided inspires you to believe in the Lord Jesus Christ.
   </p>
 </div>
+<hr />
+<h1 class="text-center my-5">FAQ &ndash; Frequently Asked Questions</h1>
+<div class="container">
+  <h3>Question 1: Dummy question</h3>
+  <p>Dummy Answer</p>
+  <hr />
+  <h3>Question 2: Dummy question</h3>
+  <p>Dummy Answer</p>
+  <hr />
+  <h3>Question 3: Dummy question</h3>
+  <p>Dummy Answer</p>
+  <hr />
+  <h3>Question 4: Dummy question</h3>
+  <p>Dummy Answer</p>
+</div>
+<hr />
+<div class="container">
+  <h1 class="text-center my-5">Contact us below:</h1>
+  <form method="post" action="" id="form" class="mx-5 mt-5">
+    <div class="mb-3">
+      <label for="name" class="form-label">Name</label>
+      <input
+        type="text"
+        name="name"
+        class="form-control color-for-form"
+        id="name"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email address</label>
+      <input
+        type="text"
+        class="form-control color-for-form"
+        id="email"
+        name="email"
+        aria-describedby="emailHelp"
+        required
+      />
+      <div id="emailHelp" class="form-text text-light">
+        We'll never share your email with anyone else.
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="message" class="form-label">Share your message below:</label>
+      <textarea
+        class="form-control color-for-form"
+        id="message"
+        name="message"
+        rows="3"
+        required
+      ></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-danger mb-5">Submit</button>
+  </form>
+</div>
+
 {% endblock %} {% block scripts %} {% endblock %}

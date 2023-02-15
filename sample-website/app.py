@@ -35,13 +35,9 @@ def contact():
 def youtube():
     return render_template('youtube.html')
 
-@app.route('/resources')
-def resources():
-    return render_template('resources.html')
-
-@app.route('/code')
-def code():
-    return render_template('code.html')
+@app.route('/registration')
+def registration():
+    return render_template('registration.html')
 
 if __name__ == "__main__":
     app.run(debug=True)

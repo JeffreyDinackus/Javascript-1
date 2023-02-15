@@ -7,3 +7,7 @@ body {
   border-color: purple;
   background-color: #1a1a1d;
 }
+
+hr {
+  color: purple;
+}
