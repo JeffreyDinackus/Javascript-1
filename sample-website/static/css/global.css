@@ -8,3 +8,11 @@
 hr {
   border-width: 0.25em;
 }
+
+.linkstyling {
+  text-decoration: none;
+}
+
+.linkstyling:hover {
+  text-decoration: underline;
+}
