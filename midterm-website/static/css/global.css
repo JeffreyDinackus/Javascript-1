@@ -9,10 +9,10 @@ hr {
   border-width: 0.25em;
 }
 
-.linkstyling {
+.link-styling {
   text-decoration: none;
 }
 
-.linkstyling:hover {
+.link-styling:hover {
   text-decoration: underline;
 }
