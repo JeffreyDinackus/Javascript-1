@@ -4,6 +4,6 @@
 
 <h1>To Do!</h1>
 
-Button Garden
-a tribute page(the one you have?) redo it?
-resources page
+<p>Button Garden</p>
+<p>a tribute page(the one you have?) redo it?</p>
+<p>resources page</p>
