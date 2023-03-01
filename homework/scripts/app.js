@@ -21,7 +21,13 @@ alert(`Your string in reverse is: ${userName3.split("").reverse().join("")}`);
 //These next problems are from JavaScript from Beginner to Professional.
 
 //this is problem 2.3
-let x = 1;
+//this calculates the pythagorian theorem. a^2+b^2=c^2
+
+let b = prompt("enter a side for a");
+let a = prompt("enter a side for b");
+let c = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
+
+console.log(c);
 
 //this is problem 2.4
 let y = 2;
