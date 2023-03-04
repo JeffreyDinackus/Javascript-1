@@ -4,17 +4,31 @@
 <div class="container">
   <h1 class="text-center my-5">Spring Break Calendar for NOVA</h1>
   <label for="spring-break">Spring Break:</label>
-
+  <form action="">
   <input
     type="date"
     id="spring-break"
     class="mb-5"
-    name="Spring-Break"
+    name="spring-break"
     value="2023-03-13"
     min="2023-03-13"
     max="2023-03-19"
   />
+  <br />
+  <h1 class="text-center my-5">Second Favorite Color Selector:</h1>
+  <label for="favcolor">Select your second favorite color:</label>
+  <input
+    type="color"
+    id="favcolor"
+    name="favcolor"
+    class="mb-5"
+    value="#8009fe"
+  />    
+  <p class="mb-5">Psst... this submit button sends both the date you selected for spring break and your second favorite color.</p>
+  <div class="d-grid gap-2 d-md-flex justify-content-md-left">
+      <button type="submit" class="btn btn-danger text-end mb-5">Submit</button></form>
 </div>
+
 {% endblock %} {% block scripts %}
 
 <script src="{{url_for('static', filename='scripts/homework1.js')}}"></script>
