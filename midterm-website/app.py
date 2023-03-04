@@ -36,9 +36,13 @@ def youtube():
 def registration():
     return render_template('registration.html')
 
-@app.route('/homework')
-def homework():
-    return render_template('homework.html')
+@app.route('/hwlandingpage')
+def hwlandingpage():
+    return render_template('hwlandingpage.html')
+
+@app.route('/assignment1')
+def assignment1():
+    return render_template('assignment1.html')
 #these are for the dummy social media buttons, they are simply show I know how to redirect to a social media page (I have no social media for this website)
 
 @app.route('/externalyoutube')
