@@ -20,3 +20,7 @@ hr {
 .thumbnail {
   width: 2.5em;
 }
+
+.carousel-item {
+  height: 32rem;
+}
