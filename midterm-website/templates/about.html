@@ -93,7 +93,7 @@
     </p>
     <label for="items">Buy a item if you want: </label>
     <!-- these are fake items as a joke-->
-    <select name="items" id="items" class="mb-3">
+    <select name="items" id="items" class="mb-3 color-for-form">
       <option value="none">None Please!</option>
       <option value="leather">Leather Tank Gunnery Patches $49.99</option>
       <option value="widget">1 Widget $15.99</option>
@@ -103,14 +103,47 @@
 
     <div class="mb-3">
       <label for="credit-card" class="form-label"
-        >Credit Card Number: (only if you are buying a item) this is a fake form
-        don't actually put your credit card
+        >Credit Card Number: (only if you are buying a item) this is a dummy
+        form don't actually put your credit card
       </label>
       <input
         type="text"
         name="credit-card"
         class="form-control color-for-form"
         id="credit-card"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="ship-address" class="form-label">Shipping Address: </label>
+      <input
+        type="text"
+        name="ship-address"
+        class="form-control color-for-form"
+        id="ship-address"
+      />
+      <!-- wouldn't let me apply color to the checkbox, it isn't bad that it is white because it is easy to spot and people won't miss it. -->
+      <input
+        class="mt-4"
+        type="checkbox"
+        id="bill-same-as-shipping"
+        name="bill-same-as-shipping"
+        value="Is your billing address the same as your shipping address? "
+      />
+      <label for="bill-same-as-shipping"
+        >Is your billing address the same as your shipping address? </label
+      ><br />
+    </div>
+    <p>
+      You do not need to fill out billing address unless it is different than
+      your shipping address.
+    </p>
+    <div class="mb-3">
+      <label for="bill-address" class="form-label">Billing Address: </label>
+      <input
+        type="text"
+        name="bill-address"
+        class="form-control color-for-form"
+        id="bill-address"
       />
     </div>
     <div class="mb-3">
