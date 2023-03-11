@@ -1,0 +1,5 @@
+constants can be represented as all carouselExampleCaptions
+let TAX = .25;
+
+
+you can set variables to default values, like strings are "" or booleans are always false by default. 
