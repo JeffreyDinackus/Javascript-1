@@ -24,3 +24,8 @@ hr {
 .carousel-item {
   height: 32rem;
 }
+
+.carousel-item video {
+  max-height: auto;
+  max-width: 100%;
+}

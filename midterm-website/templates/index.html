@@ -9,13 +9,17 @@
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="{{url_for('static', filename='assets/masthead-1.gif')}}" class="d-block w-100" alt="Dog at a dog park">
+    <!-- this is your code I modified.-->
+      <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+      <source src="{{url_for('static', filename='assets/masthead-2.mp4')}}" type="video/mp4"
+	    poster="">
+      </video>
     </div>
     <div class="carousel-item">
       <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-      <source src="assets/video/night_sky.mp4" type="video/mp4"
-	    poster="../assets/video/night_sky_moment.jpg">
-  </video>
+      <source src="{{url_for('static', filename='assets/masthead-1.mp4')}}" type="video/mp4"
+	    poster="">
+      </video>
       <div class="carousel-caption d-none d-md-block">
         <h5 class="masthead-2">Glad to have you here!</h5>
         <p class="masthead-2">Scroll down to see more pages!</p>
