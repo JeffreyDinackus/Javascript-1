@@ -11,14 +11,14 @@
     <div class="carousel-item active">
     <!-- this is your code I modified.-->
       <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-      <source src="{{url_for('static', filename='assets/masthead-2.mp4')}}" type="video/mp4"
-	    poster="">
+      <source src="{{url_for('static', filename='assets/masthead-1.mp4')}}" type="video/mp4"
+	    poster="{{url_for('static', filename='assets/masthead-1-poster.png')}}">
       </video>
     </div>
     <div class="carousel-item">
       <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-      <source src="{{url_for('static', filename='assets/masthead-1.mp4')}}" type="video/mp4"
-	    poster="">
+      <source src="{{url_for('static', filename='assets/masthead-2.mp4')}}" type="video/mp4"
+	    poster="{{url_for('static', filename='assets/masthead-2-poster.png')}}">
       </video>
       <div class="carousel-caption d-none d-md-block">
         <h5 class="masthead-2">Glad to have you here!</h5>
