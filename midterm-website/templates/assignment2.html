@@ -1,36 +1,8 @@
 {% extends 'base.html' %} {% block title %}
 <title>This is a blank page in case I want to make more pages</title>{% endblock
 %}{% block head %} {% endblock %} {% block content %}
-<div class="container">
-<!-- there are some extra form elements here, it can be seen as another form. -->
-  <h1 class="text-center my-5">Spring Break Calendar for NOVA</h1>
-  <label for="spring-break">Select when you want to party this spring break! Psst... this is a dummy form... </label>
-  <form action="">
-  <input
-    type="date"
-    id="spring-break"
-    class="mb-5"
-    name="spring-break"
-    value="2023-03-13"
-    min="2023-03-13"
-    max="2023-03-19"
-  />
-  <br />
-  <h1 class="text-center my-5">Second Favorite Color Selector:</h1>
-  <label for="favcolor">Select your second favorite color:</label>
-  <input
-    type="color"
-    id="favcolor"
-    name="favcolor"
-    class="mb-5"
-    value="#8009fe"
-  />    
-  <p class="mb-5">Psst... this submit button sends both the date you selected for spring break and your second favorite color.</p>
-  <div class="d-grid gap-2 d-md-flex justify-content-md-left">
-      <button type="submit" class="btn btn-danger text-end mb-5">Submit</button></form>
-</div>
-</div>
+<div class="container"></div>
 {% endblock %} {% block scripts %}
 
-<script src="{{url_for('static', filename='homework/scripts/assignment1.js')}}"></script>
+<script src="{{url_for('static', filename='homework/scripts/assignment2.js')}}"></script>
 {% endblock %}
