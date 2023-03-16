@@ -1,7 +1,14 @@
 {% extends 'base.html' %} {% block title %}
 <title>This is a blank page in case I want to make more pages</title>{% endblock
 %}{% block head %} {% endblock %} {% block content %}
-<div class="container"></div>
+<div class="container">
+  <p>
+    Check the logs to see how many vowels and consenantes are in these courses:
+  </p>
+  <p>ITP 270: Programming for Cybersecurity</p>
+  <p>ITP 120: Java 1</p>
+  <p>ITN 200: Networking Administration</p>
+</div>
 {% endblock %} {% block scripts %}
 
 <script src="{{url_for('static', filename='homework/scripts/assignment2.js')}}"></script>
