@@ -47,6 +47,10 @@ def hwlandingpage():
 @app.route('/assignment1')
 def assignment1():
     return render_template('assignment1.html')
+
+@app.route('/assignment2')
+def assignment2():
+    return render_template('assignment2.html')
 #these are for the dummy social media buttons, they are simply show I know how to redirect to a social media page (I have no social media for this website)
 
 @app.route('/externalyoutube')
