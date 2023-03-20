@@ -54,9 +54,10 @@ mode = prompt(
   "for fahrenheit to celcius type 'ftc' or for celcius to fahrenheit type 'ctf', any other response will be discarded."
 );
 
-if (mode == "ftc") {
+if (mode.toLowerCase() == "ftc") {
   temp = prompt("enter a fahrenheit temp to convert to celcius.");
-  if (isNaN(temp)) {
+  //checks if it is NaN
+  if (isNaN(temp) || temp == "") {
     alert("You did not enter a number. Refresh and try again");
     throw new Error("Temp is NaN");
   } else {
@@ -67,9 +68,10 @@ if (mode == "ftc") {
       )} celcius`
     );
   }
-} else if (mode == "ctf") {
+} else if (mode.toLowerCase() == "ctf") {
   temp = prompt("enter a celcius temp to convert to fahrenheit.");
-  if (isNaN(temp)) {
+  //checking for null and ""
+  if (isNaN(temp || temp == "")) {
     alert("You did not enter a number. Refresh and try again");
     throw new Error("Temp is NaN");
   } else {
