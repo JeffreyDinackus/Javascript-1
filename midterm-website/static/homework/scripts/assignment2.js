@@ -36,6 +36,14 @@ console.log(
 );
 
 //Exercise 2: Print multiplication and Division table  0 - 12 [ 10 points each => 20 points]
+//this one is kinda self explanatory if you know how a for loop works. I don't know how to print in the html so well, I know it sorta showed it in one of the readings but it never was explained or talked about in class. Therefore, I used logs.
+console.log("This begins the multiplication tables, 0 - 12.");
+for (let i = 0; i <= 12; i++) {
+  console.log(`Multiplication table for ${i}`);
+  for (let j = 0; j <= 12; j++) {
+    console.log(`${i} * ${j} = ${j * i}`);
+  }
+}
 
 // Exercise 3**: Converter Fahrenheit to Celsius -> vice versa [1.5  points each => 3 points]
 
