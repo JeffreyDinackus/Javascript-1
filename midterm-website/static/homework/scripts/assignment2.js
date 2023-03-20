@@ -34,6 +34,9 @@ function consenants(str) {
 console.log(
   `There are ${vowelsFinal} vowels and ${consenantsFinal} consenants in these courses.`
 );
+document.getElementById(
+  "vow-cons"
+).innerHTML = `There are ${vowelsFinal} vowels and ${consenantsFinal} consenants in these courses.`;
 
 //Exercise 2: Print multiplication and Division table  0 - 12 [ 10 points each => 20 points]
 //this one is kinda self explanatory if you know how a for loop works. I don't know how to print in the html so well, I know it sorta showed it in one of the readings but it never was explained or talked about in class. Therefore, I used logs.
@@ -46,6 +49,42 @@ for (let i = 0; i <= 12; i++) {
 }
 
 // Exercise 3**: Converter Fahrenheit to Celsius -> vice versa [1.5  points each => 3 points]
+
+mode = prompt(
+  "for fahrenheit to celcius type 'ftc' or for celcius to fahrenheit type 'ctf', any other response will be discarded."
+);
+
+if (mode == "ftc") {
+  temp = prompt("enter a fahrenheit temp to convert to celcius.");
+  if (isNaN(temp)) {
+    alert("You did not enter a number. Refresh and try again");
+    throw new Error("Temp is NaN");
+  } else {
+    //rounding to the nearest degree is accurate enough
+    alert(
+      `${temp} fahrenheit is equal to ${Math.round(
+        temp - 32 * (5 / 9)
+      )} celcius`
+    );
+  }
+} else if (mode == "ctf") {
+  temp = prompt("enter a celcius temp to convert to fahrenheit.");
+  if (isNaN(temp)) {
+    alert("You did not enter a number. Refresh and try again");
+    throw new Error("Temp is NaN");
+  } else {
+    //rounding to the nearest degree is accurate enough
+    alert(
+      `${temp} celcius is equal to ${Math.round(
+        temp * (9 / 5) + 32
+      )} fahrenheit`
+    );
+  }
+} else {
+  //covering my bases
+  alert("You did not print the right mode, refresh the page to try again.");
+  throw new Error("Wrong input for type");
+}
 
 // Exercise 4**: Currency Converter
 // 4a. Three (3) currencies to USD & vice versa [1.5 points each conversion => 9 points]
