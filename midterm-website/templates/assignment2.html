@@ -1,5 +1,10 @@
 {% extends 'base.html' %} {% block title %} <title>Assignment 2</title>{%
-endblock %}{% block head %} {% endblock %} {% block content %}
+endblock %} {% block head %}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='homework/css/homework2.css') }}"
+/>
+{% endblock %} {% block content %}
 <div class="container">
   <br /><br />
   <h1 class="text-center my-5">Assignment 2</h1>

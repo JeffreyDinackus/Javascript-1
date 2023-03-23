@@ -61,7 +61,7 @@ if (mode.toLowerCase() == "ftc") {
     alert("You did not enter a number. Refresh and try again");
     throw new Error("Temp is NaN");
   } else {
-    //rounding to the nearest degree is accurate enough
+    //rounding to the nearest degree is accurate enough for our purposes.
     alert(
       `${temp} fahrenheit is equal to ${Math.round(
         temp - 32 * (5 / 9)
