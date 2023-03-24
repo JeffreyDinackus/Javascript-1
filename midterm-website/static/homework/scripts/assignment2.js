@@ -91,4 +91,11 @@ if (mode.toLowerCase() == "ftc") {
 // Exercise 4**: Currency Converter
 // 4a. Three (3) currencies to USD & vice versa [1.5 points each conversion => 9 points]
 
+//these are for the USD to 3 currencies.
+const currencyEl_one = document.getElementById("currency-one");
+const currencyEl_two = document.getElementById("currency-two");
+const currencyEl_three = document.getElementById("currency-three");
+
+const amountEl_one = document.getElementById("amount-one");
+const amountEl_two = document.getElementById("amount-two");
 // 4b. Three (3) currencies to EUR & vice versa [1.5 points each conversion => 9 points]
