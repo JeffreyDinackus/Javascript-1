@@ -92,56 +92,59 @@ if (mode.toLowerCase() == "ftc") {
 // 4a. Three (3) currencies to USD & vice versa [1.5 points each conversion => 9 points]
 
 //these problem 4a and 4b are way above our level right now
+//im just gonna try alert prompts instead
 
-//these are for the USD to 3 currencies
-const currencyEl_one = document.getElementById("currency-one");
-const currencyEl_two = document.getElementById("currency-two");
-const currencyEl_three = document.getElementById("currency-three");
+//here is my original code:
 
-const amountEl_one = document.getElementById("amount-one");
-const amountEl_two = document.getElementById("amount-two");
-const amountEl_three = document.getElementById("amount-three");
+// //these are for the USD to 3 currencies
+// const currencyEl_one = document.getElementById("currency-one");
+// const currencyEl_two = document.getElementById("currency-two");
+// const currencyEl_three = document.getElementById("currency-three");
 
-const exchangeEl_one = document.getElementById("exchange-one");
-const exchangeEl_two = document.getElementById("exchange-two");
-const exchangeEl_three = document.getElementById("exchange-three");
+// const amountEl_one = document.getElementById("amount-one");
+// const amountEl_two = document.getElementById("amount-two");
+// const amountEl_three = document.getElementById("amount-three");
 
-function calculateToUSD() {
-  document.getElementById(
-    "from-USD-1"
-  ).innerHTML = `USD -> ${currencyEl_one} = ${swapToUSD1}`;
+// const exchangeEl_one = document.getElementById("exchange-one");
+// const exchangeEl_two = document.getElementById("exchange-two");
+// const exchangeEl_three = document.getElementById("exchange-three");
 
-  document.getElementById(
-    "from-USD-2"
-  ).innerHTML = `USD -> ${currencyEl_two} = ${swapToUSD2}`;
+// function calculateToUSD() {
+//   document.getElementById(
+//     "from-USD-1"
+//   ).innerHTML = `USD -> ${currencyEl_one} = ${swapToUSD1}`;
 
-  document.getElementById(
-    "from-USD-2"
-  ).innerHTML = `USD -> ${currencyEl_three} = ${swapToUSD3}`;
-}
+//   document.getElementById(
+//     "from-USD-2"
+//   ).innerHTML = `USD -> ${currencyEl_two} = ${swapToUSD2}`;
 
-// Event Listeners
-currencyEl_one.addEventListener("change", calculate);
-amountEl_one.addEventListener("input", calculate);
-currencyEl_two.addEventListener("change", calculate);
-amountEl_two.addEventListener("input", calculate);
-swap.addEventListener("click", () => {
-  const temp = currencyEl_one.value;
-  currencyEl_one.value = currencyEl_two.value;
-  currencyEl_two.value = temp;
-  calculate();
-});
+//   document.getElementById(
+//     "from-USD-2"
+//   ).innerHTML = `USD -> ${currencyEl_three} = ${swapToUSD3}`;
+// }
 
-//these next ones are for USD to 3 currencies.
+// // Event Listeners
+// currencyEl_one.addEventListener("change", calculate);
+// amountEl_one.addEventListener("input", calculate);
+// currencyEl_two.addEventListener("change", calculate);
+// amountEl_two.addEventListener("input", calculate);
+// swap.addEventListener("click", () => {
+//   const temp = currencyEl_one.value;
+//   currencyEl_one.value = currencyEl_two.value;
+//   currencyEl_two.value = temp;
+//   calculate();
+// });
 
-const USDamount = document.getElementById("USD-amount");
+// //these next ones are for USD to 3 currencies.
 
-const USDCurrencyOne = document.getElementById("USD-currency-one");
-const USDCurrencyTwo = document.getElementById("USD-currency-two");
-const USDCurrencyThree = document.getElementById("USD-currency-three");
+// const USDamount = document.getElementById("USD-amount");
 
-const USDExchangeOne = document.getElementById("USD-exchange-one");
-const USDExchangetwo = document.getElementById("USD-exchange-two");
-const USDExchangeThree = document.getElementById("USD-exchange-three");
+// const USDCurrencyOne = document.getElementById("USD-currency-one");
+// const USDCurrencyTwo = document.getElementById("USD-currency-two");
+// const USDCurrencyThree = document.getElementById("USD-currency-three");
 
-// 4b. Three (3) currencies to EUR & vice versa [1.5 points each conversion => 9 points]
+// const USDExchangeOne = document.getElementById("USD-exchange-one");
+// const USDExchangetwo = document.getElementById("USD-exchange-two");
+// const USDExchangeThree = document.getElementById("USD-exchange-three");
+
+// // 4b. Three (3) currencies to EUR & vice versa [1.5 points each conversion => 9 points]
