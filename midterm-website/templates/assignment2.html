@@ -17,6 +17,34 @@ endblock %} {% block head %}
   <p>ITN 200: Networking Administration</p>
   <!-- I didn't want any text to appear before the javascript loaded.-->
   <p id="vow-cons">&nbsp;</p><hr />
+   <button class="btn btn-primary" type="button" onclick="currency()"id="currency">I want to use the currency convertor!</button>
+
+
+
+<script>
+function currency(){
+    type = prompt(
+    'Choose the option you want:\nUSD to 3 currencies type \"USDto3\"\n3 currencies to USD type \"3toUSD\"\nEUR to 3 currencies type \"EURto3\"\n3 currencies to EUR type \"3toEUR\"\n'
+  );
+  switch(type.toLowerCase()) {
+  case "usdto3":
+    alert("x");
+    break;
+  case "3tousd":
+    
+    break;
+  case "eurto3":
+    
+    break;
+  case "3toeur":
+    
+    break;
+  default:
+    text = "Enter a value exactly next time";
+}
+}
+  </script>
+  <!-- this code is my original attempt
   <div class="row">
     <div class="col">
       <p>Enter the currency and exchange rate:</p>
@@ -405,7 +433,7 @@ endblock %} {% block head %}
       <p>Enter the exchange rate:</p>
       <input type="number" id="USD-exchange-three" placeholder="1" value="1" />
     </div></div>
-    <button class="btn btn-success mt-3" id="swap-from-USD">Swap from USD</button>
+    <button class="btn btn-success mt-3" id="swap-from-USD">Swap from USD</button>-->
   </div>
   {% endblock %} {% block scripts %}
 

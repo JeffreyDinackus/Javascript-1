@@ -91,8 +91,9 @@ if (mode.toLowerCase() == "ftc") {
 // Exercise 4**: Currency Converter
 // 4a. Three (3) currencies to USD & vice versa [1.5 points each conversion => 9 points]
 
-//these problem 4a and 4b are way above our level right now
+//these problem 4a and 4b above our level right now
 //im just gonna try alert prompts instead
+//my current code is in a script tag on my html because it wouldn't work in my js file.
 
 //here is my original code:
 
