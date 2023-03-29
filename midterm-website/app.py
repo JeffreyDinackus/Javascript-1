@@ -51,6 +51,10 @@ def assignment1():
 @app.route('/assignment2')
 def assignment2():
     return render_template('assignment2.html')
+
+@app.route('/assignment3')
+def assignment3():
+    return render_template('assignment3.html')
 #these are for the dummy social media buttons, they are simply show I know how to redirect to a social media page (I have no social media for this website)
 
 @app.route('/externalyoutube')

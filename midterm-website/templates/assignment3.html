@@ -1,6 +1,14 @@
 {% extends 'base.html' %} {% block title %}
 <title>This is a blank page in case I want to make more pages</title>{% endblock
-%}{% block head %} {% endblock %} {% block content %}{% endblock %} {% block
-scripts %}
+%}{% block head %} {% endblock %} {% block content %}
+<div class="container">
+  <button class="btn btn-primary" type="button" onclick="exercise0()">
+    Show me the arrays!
+  </button>
+
+  <p id="first"></p>
+</div>
+
+{% endblock %} {% block scripts %}
 <script src="{{url_for('static', filename='homework/scripts/assignment3.js')}}"></script>
 {% endblock %}
