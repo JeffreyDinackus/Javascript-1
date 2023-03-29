@@ -4,13 +4,17 @@
 
 function exercise0() {
   array1 = random(25);
-  document.getElementById("first").innerHTML = array1;
+  document.getElementById("first").innerHTML = JSON.stringify(array1, null, 2);
+  array2 = random(77);
+  document.getElementById("second").innerHTML = JSON.stringify(array2, null, 2);
+  array3 = random(100);
+  document.getElementById("third").innerHTML = JSON.stringify(array3, null, 2);
 }
 
 function random(size) {
   let array = [];
   for (let i = 0; i <= size; i++) {
-    array[i] = Math.floor(Math.random() * 26) + 1;
+    array[i] = Math.floor(Math.random() * 101) + 1;
   }
   return array;
 }
