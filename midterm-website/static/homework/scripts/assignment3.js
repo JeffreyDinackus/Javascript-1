@@ -72,14 +72,32 @@ function exercise2(array) {
 // Write a script that uses the array with one hundred [100] elements to create a new array with only prime elements.
 
 function exercise3(array) {
-  let primeArray = [];
-  x = 0;
-  for (var i = 0; i < array.length; i++) {
-    if (array[i] % 2 == 1) {
-      primeArray[x] = array[i];
-      x += 1;
-    }
-  }
+
+  //this is a original attempt, my final attempt is below. 
+  // let primeArray = [];
+  // x = 0;
+  // sentinel = false;
+  // for (let i = 0; i < array.length; i++) {
+  //   for (let j = 2; j < array[i]; j++) {
+  //     if (array[i] == 0 || array[i] == 1) {
+  //       sentinel = true;
+  //     }
+  //     if (j * j == array[i]) {
+  //       sentinel = true;
+  //       console.log(j);
+  //     }
+  //   }
+
+  //   if (sentinel == false) {
+  //     primeArray[x] = array[i];
+  //     x += 1;
+  //   } else {
+  //     sentinel = false;
+  //   }
+  // }
+
+  primeArray = array.filter(isPrime);
+
   document.getElementById("sixth").innerHTML = JSON.stringify(
     primeArray,
     null,
@@ -89,6 +107,14 @@ function exercise3(array) {
     "This is a array with all of the prime numbers appearing in the array with 100 random numbers";
 }
 
+function isPrime(num) {
+  for (let i = 2; num > i; i++) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+  return num > 1;
+}
 // Exercise 2  [10 points]
 
 // Write a script that uses any of the generated arrays or generates a new array. Sort the elements in the array from lowest to highest.
