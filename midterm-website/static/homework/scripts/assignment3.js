@@ -4,6 +4,7 @@
 
 function exercise0() {
   array1 = random(24);
+  //I use this one because the array doesn't go off the screen with this code.
   document.getElementById("first").innerHTML = JSON.stringify(array1, null, 2);
   document.getElementById("text1").innerHTML =
     "This is a array with 25 random numbers";
@@ -26,6 +27,7 @@ function exercise0() {
 
 function random(size) {
   let array = [];
+  //This makes a random array 0 to 100 I think. It sets it to the floor so even though it is * 101 it will always round down.
   for (let i = 0; i <= size; i++) {
     array[i] = Math.floor(Math.random() * 101);
   }
@@ -38,6 +40,7 @@ function random(size) {
 
 function exercise1(array) {
   var total = 0;
+  //this loops through the array to it's length and adds all the numbers up.
   for (var i = 0; i < array.length - 1; i++) {
     total += +array[i];
   }
@@ -54,6 +57,7 @@ function exercise1(array) {
 function exercise2(array) {
   let oddArray = [];
   x = 0;
+  //this filters out the numbers in the first array and leaves only the odd numbers.
   for (var i = 0; i < array.length; i++) {
     if (array[i] % 2 == 1) {
       oddArray[x] = array[i];
@@ -72,8 +76,7 @@ function exercise2(array) {
 // Write a script that uses the array with one hundred [100] elements to create a new array with only prime elements.
 
 function exercise3(array) {
-
-  //this is a original attempt, my final attempt is below. 
+  //this is a original attempt, my final attempt is below.
   // let primeArray = [];
   // x = 0;
   // sentinel = false;
@@ -108,6 +111,7 @@ function exercise3(array) {
 }
 
 function isPrime(num) {
+  //This loops through numbers, starting at 2, to to the num that is set, the size. it returns false if num % i is equal to 0. It turns the array into a prime array.
   for (let i = 2; num > i; i++) {
     if (num % i === 0) {
       return false;
@@ -118,6 +122,8 @@ function isPrime(num) {
 // Exercise 2  [10 points]
 
 // Write a script that uses any of the generated arrays or generates a new array. Sort the elements in the array from lowest to highest.
+
+//this function sorts the array using the sort function with minor modifications because the sort function does not work typically. it goes 1, 12, 15, 2, 25, 3, 34, 36 etc. without these modifications.
 function exercise4(array) {
   array.sort(function (a, b) {
     return a - b;
