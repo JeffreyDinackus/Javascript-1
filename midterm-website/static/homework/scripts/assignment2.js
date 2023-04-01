@@ -40,12 +40,51 @@ document.getElementById(
 
 //Exercise 2: Print multiplication and Division table  0 - 12 [ 10 points each => 20 points]
 //this one is kinda self explanatory if you know how a for loop works. I don't know how to print in the html so well, I know it sorta showed it in one of the readings but it never was explained or talked about in class. Therefore, I used logs.
-console.log("This begins the multiplication tables, 0 - 12.");
-for (let i = 0; i <= 12; i++) {
-  console.log(`Multiplication table for ${i}`);
-  for (let j = 0; j <= 12; j++) {
-    console.log(`${i} * ${j} = ${j * i}`);
+
+let array0 = table(0);
+let array1 = table(1);
+let array2 = table(2);
+let array3 = table(3);
+let array4 = table(4);
+let array5 = table(5);
+let array6 = table(6);
+
+let array7 = table(7);
+let array8 = table(8);
+let array9 = table(9);
+let array10 = table(10);
+let array11 = table(11);
+let array12 = table(12);
+
+document.getElementById("zero").innerHTML = JSON.stringify(array0, null, 2);
+
+document.getElementById("one").innerHTML = JSON.stringify(array1, null, 2);
+document.getElementById("two").innerHTML = JSON.stringify(array2, null, 2);
+document.getElementById("three").innerHTML = JSON.stringify(array3, null, 2);
+
+document.getElementById("four").innerHTML = JSON.stringify(array4, null, 2);
+
+document.getElementById("five").innerHTML = JSON.stringify(array5, null, 2);
+document.getElementById("six").innerHTML = JSON.stringify(array6, null, 2);
+document.getElementById("seven").innerHTML = JSON.stringify(array7, null, 2);
+
+document.getElementById("eight").innerHTML = JSON.stringify(array8, null, 2);
+document.getElementById("nine").innerHTML = JSON.stringify(array9, null, 2);
+document.getElementById("ten").innerHTML = JSON.stringify(array10, null, 2);
+
+document.getElementById("eleven").innerHTML = JSON.stringify(array11, null, 2);
+
+document.getElementById("twelve").innerHTML = JSON.stringify(array12, null, 2);
+
+function table(num) {
+  let array = [];
+  array[0] = `This begins the multiplication table for ${num}`;
+  let h = 1;
+  for (let i = 0; i <= 12; i++) {
+    array[h] = `${num} * ${i} = ${+num * +i}`;
+    h += 1;
   }
+  return array;
 }
 
 // Exercise 3**: Converter Fahrenheit to Celsius -> vice versa [1.5  points each => 3 points]
