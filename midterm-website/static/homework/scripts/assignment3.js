@@ -39,9 +39,9 @@ function random(size) {
 // Write a script that uses the array with twenty-five [25] elements which adds the elements in the array.
 
 function exercise1(array) {
-  var total = 0;
+  let total = 0;
   //this loops through the array to it's length and adds all the numbers up.
-  for (var i = 0; i < array.length - 1; i++) {
+  for (let i = 0; i < array.length - 1; i++) {
     total += +array[i];
   }
   console.log(total);
@@ -58,7 +58,7 @@ function exercise2(array) {
   let oddArray = [];
   x = 0;
   //this filters out the numbers in the first array and leaves only the odd numbers.
-  for (var i = 0; i < array.length; i++) {
+  for (let i = 0; i < array.length; i++) {
     if (array[i] % 2 == 1) {
       oddArray[x] = array[i];
       x += 1;

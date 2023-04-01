@@ -15,7 +15,7 @@ consenantsFinal += consenants(classthree);
 function vowels(str) {
   //g flag means global, i flag ignores case.
   //this function takes 1 class a time, making it much more flexible than if I hardcoded the text strings in.
-  var i = str.match(/[aeiou]/gi);
+  let i = str.match(/[aeiou]/gi);
   //? is the ternary operator, it replaces with one of the second values depending on if it equals null, null is 0, otherwise, it is i.length.
   return i === null ? 0 : i.length;
   //the output is always a number
@@ -25,7 +25,7 @@ function consenants(str) {
   //g flag means global, i flag ignores case.
   //this function takes 1 string a time, making it much more flexible than if I hardcoded the text strings in.
   //I included every letter that is not a vowel.
-  var i = str.match(/[bcdfghjklmnpqrstvwxyz]/gi);
+  let i = str.match(/[bcdfghjklmnpqrstvwxyz]/gi);
   //? is the ternary operator, it replaces with one of the second values depending on if it equals null, null is 0, otherwise, it is i.length.
   return i === null ? 0 : i.length;
   //the output is always a number
