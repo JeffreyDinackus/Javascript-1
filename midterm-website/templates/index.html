@@ -7,7 +7,7 @@
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-  </div>
+      </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
     <!-- this is your code I modified.-->
@@ -16,15 +16,20 @@
 	    poster="{{url_for('static', filename='assets/masthead-1-poster.png')}}">
       <p>A video of a campfire with someone adding coals</p>
       </video>
+      <div class="carousel-caption d-none d-md-block">
+        <h5>The fire burns</h5>
+        <p>And continues to burn. </p>
+      </div>
     </div>
     <div class="carousel-item">
       <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
       <source src="{{url_for('static', filename='assets/masthead-2.mp4')}}" type="video/mp4"
 	    poster="{{url_for('static', filename='assets/masthead-2-poster.png')}}">
-      <p>A video of some dogs playing, they are white and black. The video begins with one of the dogs standing near the camera, and he runs to join the others.</p>
-      </video>
-      <!--<div class="carousel-caption d-none d-md-block">
-        -->
+      <p>A video of some dogs playing, they are white and black. The video begins with one of the dogs standing near the camera, and he runs to join the others.</p></video>
+      <div class="carousel-caption d-none d-md-block">
+        <h5>This is a video of dogs playing</h5>
+        <p>Dogs run back and forth playing</p>
+      </div>
       </div>
     </div>
   </div>
@@ -37,7 +42,6 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
-
 <h1 class="text-center my-5">Juice Media Distributed</h1>
 
 <div class="container">
