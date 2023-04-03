@@ -2,11 +2,6 @@ body {
   background-color: black;
   color: white;
 }
-.color-for-form {
-  color: red;
-  border-color: purple;
-  background-color: #1a1a1d;
-}
 
 hr {
   color: red;
@@ -18,4 +13,9 @@ hr {
 
 .masthead-2 {
   color: white;
+}
+
+.masthead-text {
+  color: black;
+  font-weight: 900;
 }
