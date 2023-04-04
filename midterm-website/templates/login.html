@@ -1,10 +1,15 @@
-{% extends 'base.html' %} {% block title %} <title>Login</title>{% endblock
-%}{% block head %} {% endblock %} {% block content %}
+{% extends 'base.html' %} {% block title %} <title>Login</title>{% endblock %}{%
+block head %} {% endblock %} {% block content %}
 
 <!-- registration goes here -->
 <div class="container">
   <h1 class="text-center my-5">Login here</h1>
-  <form method="post" action="mailto:example@exmaple.com" id="form" class="mx-5 mt-5">
+  <form
+    method="post"
+    action="mailto:example@exmaple.com"
+    id="form"
+    class="mx-5 mt-5"
+  >
     <div class="mb-3">
       <label for="email" class="form-label"
         >Emter the email you signed up with:
@@ -28,6 +33,11 @@
         required
       />
     </div>
+    <p>
+      This is a form that does not work, I made it for pactice. If you press
+      submit you may get a error because it has nowhere to send the form, or a
+      email application may open.
+    </p>
     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
       <button type="submit" class="btn btn-danger text-end mb-5">Submit</button>
     </div>

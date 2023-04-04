@@ -1,4 +1,5 @@
 #if you don't understand flask, use this video https://www.youtube.com/watch?v=Z1RJmh_OqeA. the first 15 minutes or so will help you explain flask without databases. This is also a video I referenced when making this file.
+#Notes on accessability: I did my best to follow the checklist you gave us and follow what you said in class. A lot of stuff did not apply to my website because my website is so small in scope. Some of the definitions need to be explained in common english and not industry jargon. 
 from flask import Flask, render_template, redirect
 #the commented out stuff is code I would use if I want a database later
 # from flask_sqlalchemy import SQLAlchemy
