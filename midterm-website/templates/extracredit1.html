@@ -32,7 +32,7 @@ endblock %}{% block head %}
     Make a password for me!
   </button>
   <button class="btn btn-primary mt-3" type="button" onclick="customPasswd()">
-    Make a password for me!
+    Make a password for me with my input!
   </button>
 </div>
 {% endblock %} {% block scripts %}
@@ -54,6 +54,7 @@ endblock %}{% block head %}
   };
 
   // When the user starts to type something inside the password field
+  //this is sorta buggy with the password generator, but it has basic functionality. It updates on keystroke.
   myInput.onkeyup = function () {
     // Validate lowercase letters
     var lowerCaseLetters = /[a-z]/g;
