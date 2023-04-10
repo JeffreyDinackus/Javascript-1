@@ -3,6 +3,7 @@ function generatePasswd() {
     charset =
       "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+~`|}{[]:;?><,./-=",
     retVal = "";
+  //this makes a random the length set above using Math.random and the charset provided.
   for (var i = 0, n = charset.length; i < length; ++i) {
     retVal += charset.charAt(Math.floor(Math.random() * n));
   }
