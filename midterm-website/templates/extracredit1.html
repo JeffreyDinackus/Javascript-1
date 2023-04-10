@@ -28,6 +28,12 @@ endblock %}{% block head %}
     <p id="number" class="invalid">A number</p>
     <p id="length" class="invalid">Minimum 8 characters</p>
   </div>
+  <button class="btn btn-primary mt-3" onclick="generatePasswd()" type="button"">
+    Make a password for me!
+  </button>
+  <button class="btn btn-primary mt-3" type="button" onclick="customPasswd()">
+    Make a password for me!
+  </button>
 </div>
 {% endblock %} {% block scripts %}
 <script src="{{url_for('static', filename='homework/scripts/extracredit1.js')}}"></script>

@@ -1,7 +1,7 @@
 /* The message box is shown when the user clicks on the password field */
 #message {
   display: none;
-  background: #f1f1f1;
+  background: black;
   color: #000;
   position: relative;
   padding: 20px;
@@ -21,7 +21,7 @@
 .valid:before {
   position: relative;
   left: -35px;
-  content: "VALID";
+  content: "SATISFIED";
 }
 
 /* Add a red text color and an "x" icon when the requirements are wrong */
@@ -32,5 +32,5 @@
 .invalid:before {
   position: relative;
   left: -35px;
-  content: "INVALID";
+  content: "NOT SATISFIED";
 }
