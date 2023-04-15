@@ -61,6 +61,10 @@ def assignment3():
 def extracredit1():
     return render_template('extracredit1.html')
 
+@app.route('/blog1')
+def blog1():
+    return redirect("http://54.173.75.78/")
+
 #these are for the dummy social media buttons, they are simply show I know how to redirect to a social media page (I have no social media for this website)
 
 @app.route('/externalyoutube')
