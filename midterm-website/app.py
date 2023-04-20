@@ -57,6 +57,10 @@ def assignment2():
 def assignment3():
     return render_template('assignment3.html')
 
+@app.route('/assignment4')
+def assignment4():
+    return render_template('assignment4.html')
+
 @app.route('/extracredit1')
 def extracredit1():
     return render_template('extracredit1.html')
