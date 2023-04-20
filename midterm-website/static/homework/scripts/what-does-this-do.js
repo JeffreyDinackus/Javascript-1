@@ -1,4 +1,4 @@
-//what does this code do?
+//Professor Manuel, what does this code do?
 
 function _0x3df0(_0x13d40c, _0x3933aa) {
   var _0x3bb4b9 = _0x3bb4();
