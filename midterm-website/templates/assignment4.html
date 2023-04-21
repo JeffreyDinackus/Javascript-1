@@ -1,5 +1,20 @@
 {% extends 'base.html' %} {% block title %} <title>Assignment 4</title>{%
-endblock %}{% block head %} {% endblock %} {% block content %}{% endblock %} {%
-block scripts %}
+endblock %}{% block head %}<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='homework/css/assignment4.css') }}"
+/>
+{% endblock %} {% block content %}
+<div class="container my-5">
+  <button class="btn btn-info" type="button" onclick="digitalClock()">
+    Show me the 24 hour clock!
+  </button>
+  <button class="btn btn-info" type="button" onclick="twelveHourClock()">
+    Show me the 12 hour clock!
+  </button>
+  <div class="text-center clock my-5" id="clock"></div>
+  <div class="text-center clock my-5" id="clock2"></div>
+</div>
+{% endblock %} {% block scripts %}
 <script src="{{url_for('static', filename='homework/scripts/what-does-this-do.js')}}"></script>
+<script src="{{url_for('static', filename='homework/scripts/assignment4.js')}}"></script>
 {% endblock %}
