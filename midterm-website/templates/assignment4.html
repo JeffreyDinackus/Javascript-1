@@ -13,6 +13,158 @@ endblock %}{% block head %}<link
   </button>
   <div class="text-center clock my-5" id="clock"></div>
   <div class="text-center clock my-5" id="clock2"></div>
+  <form name="frm">
+    <input name="result" />
+    <br />
+    <input
+      name="1"
+      class="btn btn-success"
+      type="button"
+      value="1"
+      onClick="run(1)"
+    />
+    <input
+      name="2"
+      class="btn btn-success"
+      type="button"
+      value="2"
+      onClick="run(2)"
+    />
+    <input
+      name="3"
+      class="btn btn-success"
+      type="button"
+      value="3"
+      onClick="run(3)"
+    />
+    <input
+      type="button"
+      class="btn btn-danger"
+      name="times"
+      value="*"
+      onClick="runTimes()"
+    />
+    <input
+      type="button"
+      class="btn btn-danger"
+      name="exponent"
+      value="**"
+      onClick="runExponent()"
+    />
+    <br />
+    <input
+      name="4"
+      class="btn btn-success"
+      type="button"
+      value="4"
+      onClick="run(4)"
+    />
+    <input
+      name="5"
+      class="btn btn-success"
+      type="button"
+      value="5"
+      onClick="run(5)"
+    />
+    <input
+      name="6"
+      class="btn btn-success"
+      type="button"
+      value="6"
+      onClick="run(6)"
+    />
+    <input
+      class="btn btn-danger"
+      type="button"
+      name="minus"
+      value="-"
+      onClick="runMinus()"
+    />
+    <input
+      class="btn btn-danger"
+      type="button"
+      name="divide"
+      value="/"
+      onClick="runDivide()"
+    />
+    <br />
+
+    <input
+      name="7"
+      class="btn btn-success"
+      type="button"
+      value="7"
+      onClick="run(7)"
+    />
+    <input
+      name="8"
+      class="btn btn-success"
+      type="button"
+      value="8"
+      onClick="run(8)"
+    />
+    <input
+      name="9"
+      class="btn btn-success"
+      type="button"
+      value="9"
+      onClick="run(9)"
+    />
+
+    <input
+      class="btn btn-danger"
+      type="button"
+      name="plus"
+      value="+"
+      onClick="runplus()"
+    />
+
+    <input
+      class="btn btn-danger"
+      type="button"
+      name="calc"
+      value="="
+      onClick="evalu()"
+    />
+    <input
+      class="btn btn-danger"
+      type="button"
+      name="calc"
+      value="A/C"
+      onClick="clearit()"
+    />
+  </form>
+
+  <script type="text/javascript">
+    function run(x) {
+      frm.result.value += x;
+    }
+
+    function runplus() {
+      frm.result.value += '+';
+    }
+
+    function runTimes() {
+      frm.result.value += '*';
+    }
+    function runExponent() {
+      frm.result.value += '**';
+    }
+    function runMinus() {
+      frm.result.value += '-';
+    }
+    function runDivide() {
+      frm.result.value += '/';
+    }
+    function evalu() {
+      var evalo = eval(frm.result.value);
+
+      frm.result.value = evalo;
+    }
+    function clearit() {
+      frm.result.value = '';
+    }
+  </script>
 </div>
 {% endblock %} {% block scripts %}
 <script src="{{url_for('static', filename='homework/scripts/what-does-this-do.js')}}"></script>
