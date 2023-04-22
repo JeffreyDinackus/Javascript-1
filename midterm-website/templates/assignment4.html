@@ -14,7 +14,7 @@ endblock %}{% block head %}<link
   <div class="text-center clock my-5" id="clock"></div>
   <div class="text-center clock my-5" id="clock2"></div>
   <form name="frm">
-    <input name="result" />
+    <input name="result" class="calc" />
     <br />
     <!-- this calculator adds numbers by using the run function and the onclick event. It also uses the eval function to evaluate the string. The clearit function clears the input field. The runplus, runTimes, runExponent, runMinus, and runDivide functions add the appropriate operator to the input field. -->
     <input
@@ -52,6 +52,20 @@ endblock %}{% block head %}<link
       value="**"
       onClick="runExponent()"
     />
+    <input
+      type="button"
+      class="btn btn-danger"
+      name="exponent"
+      value="^2"
+      onClick="runSquare()"
+    />
+    <input
+      type="button"
+      class="btn btn-danger"
+      name="exponent"
+      value="sqrt"
+      onClick="runSquareRoot()"
+    />
     <br />
     <input
       name="4"
@@ -87,6 +101,20 @@ endblock %}{% block head %}<link
       name="divide"
       value="/"
       onClick="runDivide()"
+    />
+    <input
+      class="btn btn-danger"
+      type="button"
+      name="divide"
+      value="pi"
+      onClick="pi()"
+    />
+    <input
+      class="btn btn-danger"
+      type="button"
+      name="divide"
+      value="base10"
+      onClick="runbase10()"
     />
     <br />
 
@@ -134,17 +162,52 @@ endblock %}{% block head %}<link
       value="A/C"
       onClick="clearit()"
     />
+    <input
+      class="btn btn-danger"
+      type="button"
+      name="calc"
+      value="base8"
+      onClick="runbase8()"
+    />
+    <br />
+    <input
+      name="0"
+      class="btn btn-success"
+      type="button"
+      value="0"
+      onClick="run(0)"
+    />
   </form>
 
   <script type="text/javascript">
+    function runbase10() {
+      i = frm.result.value;
+      //set to base 10
+      x = parseInt(i).toString(10);
+      frm.result.value = x;
+    }
+
+    function runbase8() {
+      i = frm.result.value;
+      //set to base 8
+      x = parseInt(i).toString(8);
+      frm.result.value = x;
+    }
     function run(x) {
       frm.result.value += x;
     }
-
+    function runSquare() {
+      frm.result.value += '**2';
+    }
+    function runSquareRoot() {
+      frm.result.value += '**0.5';
+    }
     function runplus() {
       frm.result.value += '+';
     }
-
+    function pi() {
+      frm.result.value += '3.14';
+    }
     function runTimes() {
       frm.result.value += '*';
     }
