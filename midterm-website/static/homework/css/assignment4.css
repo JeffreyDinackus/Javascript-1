@@ -1,7 +1,8 @@
 .calc {
   width: 100%;
   height: 100%;
-  background-color: #f2f2f2;
+  background-color: #101820ff;
+  color: #fee715ff;
   padding: 20px;
   box-sizing: border-box;
   display: flex;

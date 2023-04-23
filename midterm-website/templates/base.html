@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- this syntax below is called jinga 2 syntax, it is covered in the video in app.py in the first 15 minutes. It is simply syntax. When you have a block, this is a place where you can put stuff into the page on other pages, it is like a varaible. The other pages extend the base.html and will have the content found on base.html as long as they extend them. THe content in the pages extending base.html will be found in the blocks found on base.html. Think of a block like assgigning a varaible. Typically, the content found on base.html is content that will be found on every page, like the navbar and footer. -->
     {% block title %}{% endblock %} {% block head %}{% endblock %}
+    <link rel="shortcut icon" href="{{url_for('static', filename='assets/juicebox.png')}}" />
+
     <!-- this is the link to the bootstrap css file using Flask syntax -->
     <link
       rel="stylesheet"
