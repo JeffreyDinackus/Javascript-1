@@ -221,7 +221,10 @@ endblock %}{% block head %}<link
     function runDivide() {
       frm.result.value += '/';
     }
+
+    //this function evaluates the string and displays the result
     function evalu() {
+      //it's not perfect but in a basic way it works
       var evalo = eval(frm.result.value);
 
       frm.result.value = evalo;
