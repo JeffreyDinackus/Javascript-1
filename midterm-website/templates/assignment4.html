@@ -180,13 +180,14 @@ endblock %}{% block head %}<link
   </form>
 
   <script type="text/javascript">
+    //I don't know exactly what this button should do as by default the number is base 10. I suppose nothing.
     function runbase10() {
       i = frm.result.value;
       //set to base 10
       x = parseInt(i).toString(10);
       frm.result.value = x;
     }
-    //set to base 8
+    //this function uses parseint to convert the string to an integer and then uses the toString function to convert the integer to a string in base 8.
     function runbase8() {
       i = frm.result.value;
       //set to base 8
