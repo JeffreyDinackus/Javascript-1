@@ -1,5 +1,35 @@
 {% extends 'base.html' %} {% block title %} <title>Extra Credit 2</title>{%
-endblock %}{% block head %} {% endblock %} {% block content %}{% endblock %} {%
-block scripts %}
+endblock %}{% block head %} {% endblock %} {% block content %}
+<div class="container">
+  <h1 class="my-5">The Decorator Design Pattern</h1>
+  <button type="button" class="btn btn-info">
+    Add a facebook notification!
+  </button>
+  <button type="button" class="btn btn-danger">
+    Add a email notification!
+  </button>
+  <button type="button" class="btn btn-success">
+    Add a Instagram notification!
+  </button>
+  <button
+    type="button"
+    class="btn btn-warning"
+    onclick="addSlackNotifications()"
+  >
+    Add a slack notification!
+  </button>
+  <button type="button" class="btn btn-dark text-light">
+    Send out the notifications!
+  </button>
+  <p class="my-3">
+    This is a prototype so instead of really sending the notifications, it will
+    put only the selected ones below.
+  </p>
+  <div id="facebook"></div>
+  <div id="email"></div>
+  <div id="instagram"></div>
+  <div id="slack"></div>
+</div>
+{% endblock %} {% block scripts %}
 <script src="{{url_for('static', filename='homework/scripts/extracredit2.js')}}"></script>
 {% endblock %}
