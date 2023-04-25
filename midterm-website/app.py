@@ -71,7 +71,11 @@ def extracredit2():
 
 @app.route('/blog1')
 def blog1():
-    return redirect("http://54.173.75.78/") #this is a redirect to my blog, it is not hosted on this website
+    return redirect("http://54.173.75.78/2023/04/08/what-is-application-security-and-some-common-front-end-vulnerabilities/") #this is a redirect to my blog, it is not hosted on this website
+
+@app.route('/blog2')
+def blog2():
+    return redirect("http://54.173.75.78/2023/04/24/what-are-design-patterns-and-anti-patterns-with-examples/") 
 
 #these are for the dummy social media buttons, they are simply show I know how to redirect to a social media page (I have no social media for this website)
 

@@ -1,32 +1,48 @@
 let facebookNotif = false;
-let slackNofif = false;
+let slackNotif = false;
 let emailNotif = false;
 let instagramNotif = false;
 
-function addFacebookNotifications() {}
+function addFacebookNotifications() {
+  facebookNotif = true;
+}
+function addEmailNotifications() {
+  emailNotif = true;
+}
 
-function addEmailNotifications() {}
-
-function addInstagramNotifications() {}
+function addInstagramNotifications() {
+  instagramNotif = true;
+}
 
 function addSlackNotifications() {
-  slackNofif = true;
+  slackNotif = true;
+  console.log(slackNotif);
 }
 
 function sendNotifications() {
   if (facebookNotif) {
+    document.getElementById('facebook').innerText =
+      'Notification from facebook!';
   }
-  if (slackNofif) {
+  if (slackNotif) {
     document.getElementById('slack').innerText = 'Notification from slack!';
   }
   if (emailNotif) {
-    console.log('Email notification sent');
+    document.getElementById('email').innerText = 'You have a email!';
   }
   if (instagramNotif) {
-    console.log('Instagram notification sent');
+    document.getElementById('instagram').innerText =
+      'Notification from instagram!';
   }
   slackNotif = false;
   facebookNotif = false;
   emailNotif = false;
   instagramNotif = false;
+}
+function clearIt() {
+  console.log('x');
+  document.getElementById('facebook').innerText = '';
+  document.getElementById('slack').innerText = '';
+  document.getElementById('email').innerText = '';
+  document.getElementById('instagram').innerText = '';
 }

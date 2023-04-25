@@ -2,23 +2,43 @@
 endblock %}{% block head %} {% endblock %} {% block content %}
 <div class="container">
   <h1 class="my-5">The Decorator Design Pattern</h1>
-  <button type="button" class="btn btn-info">
+  <a href="/blog2" class="link-styling"
+    >Click this text to see a blog post for more information about this design
+    pattern.</a
+  ><br />
+  <button
+    type="button"
+    class="btn btn-info my-3"
+    onclick="addFacebookNotifications()"
+  >
     Add a facebook notification!
   </button>
-  <button type="button" class="btn btn-danger">
+  <button
+    type="button"
+    class="btn btn-danger my-3"
+    onclick="addEmailNotifications()"
+  >
     Add a email notification!
   </button>
-  <button type="button" class="btn btn-success">
+  <button
+    type="button"
+    class="btn btn-success my-3"
+    onclick="addInstagramNotifications()"
+  >
     Add a Instagram notification!
   </button>
   <button
     type="button"
-    class="btn btn-warning"
+    class="btn btn-warning my-3"
     onclick="addSlackNotifications()"
   >
     Add a slack notification!
   </button>
-  <button type="button" class="btn btn-dark text-light">
+  <button
+    type="button"
+    class="btn btn-dark text-light my-3"
+    onclick="sendNotifications()"
+  >
     Send out the notifications!
   </button>
   <p class="my-3">
@@ -29,7 +49,11 @@ endblock %}{% block head %} {% endblock %} {% block content %}
   <div id="email"></div>
   <div id="instagram"></div>
   <div id="slack"></div>
+  <button type="button" class="my-3 btn btn-light" onclick="clearIt()">
+    Clear my notifications so I can do it again!
+  </button>
 </div>
+
 {% endblock %} {% block scripts %}
 <script src="{{url_for('static', filename='homework/scripts/extracredit2.js')}}"></script>
 {% endblock %}
