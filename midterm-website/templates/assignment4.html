@@ -276,6 +276,7 @@ endblock %}{% block head %}<link
     document.body.onkeyup = function (e) {
       let x = 0;
       x = Math.floor(Math.random() * 21);
+      //this checks if the keys pressed are the space bar, enter, or q. if they are, it will change the color of the background to a random color.
       if (
         e.key == ' ' ||
         e.code == 'Space' ||
