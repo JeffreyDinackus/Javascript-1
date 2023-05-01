@@ -3,9 +3,10 @@
 %}{% block head %} {% endblock %} {% block content %}
 <div class="container">
 <!-- there are some extra form elements here, it can be seen as another form. -->
+  <form action="mailto:example@exmaple.com">
   <h1 class="text-center my-5">Spring Break Calendar for NOVA</h1>
   <label for="spring-break">Select when you want to party this spring break! Psst... this is a dummy form... </label>
-  <form action="mailto:example@exmaple.com">
+  
   <input
     type="date"
     id="spring-break"
@@ -14,10 +15,10 @@
     value="2023-03-13"
     min="2023-03-13"
     max="2023-03-19"
-  />
-  <br />
+  >
+  <br >
     <label for="assist-spring-break">If you cannot use the calendar, you may enter when you can party over spring break 2023 via text: </label>
-  <input type="text" id="fname" name="assist-spring-break">
+  <input type="text" id="assist-spring-break" name="assist-spring-break">
   <h1 class="text-center my-5">Second Favorite Color Selector:</h1>
   <label for="favcolor">Select your second favorite color:</label>
   <input
@@ -28,12 +29,12 @@
     value="#8009fe"
   />    
   <label for="assist-fav-color">If you cannot use the color picker, you may enter your second favorite color via text: </label>
-  <input type="text" id="fname" name="assist-fav-color">
+  <input type="text" id="assist-color-picker" name="assist-fav-color">
 
   <p class="mb-5">Psst... this submit button sends both the date you selected for spring break and your second favorite color.</p>
   <div class="d-grid gap-2 d-md-flex justify-content-md-left">
-      <button type="submit" class="btn btn-danger text-end mb-5">Submit</button></form>
-</div>
+      <button type="submit" class="btn btn-danger text-end mb-5">Submit</button>
+</div></form>
 </div>
 {% endblock %} {% block scripts %}
 
