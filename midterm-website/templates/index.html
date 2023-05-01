@@ -5,9 +5,10 @@
 <div id="carouselExampleControls" class="carousel slide hidden_mobile" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+    <!-- the poster element seems to work when I load the page, I fixed a error when it was underneath the source element. -->
+      <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" poster="{{url_for('static', filename='assets/masthead-1-poster.png')}}">
       <source src="{{url_for('static', filename='assets/masthead-1.mp4')}}" type="video/mp4"
-	    poster="{{url_for('static', filename='assets/masthead-1-poster.png')}}">
+	    >
       <p>A video of some dogs playing, they are white and black. The video begins with one of the dogs standing near the camera, and he runs to join the others.</p></video>
       <div class="carousel-caption d-none d-md-block">
         <p class="masthead-text">Scroll down for more content</p>
@@ -21,6 +22,7 @@
 
 
 <!-- this is a javascript library called masonry, it is used to make the cards look nice and algin them. you can find information here: https://getbootstrap.com/docs/5.0/examples/masonry/-->
+<!-- some of these validator remarks seem to be false positives, I am not sure why. -->
 <div class="container">
   <div class="row" data-masonry='{"percentPosition": true }'>
     <div class="col-sm-6 col-lg-4 mb-4">
@@ -149,7 +151,7 @@
         >
           <title>Future content</title>
           <rect width="100%" height="100%" fill="#fff" />
-          <img style="size:4em;"src="{{url_for('static', filename='assets/funnycat.jpeg')}}" alt="a funny picture of a cat eating cereal with a pint of beer next time him. The beer is a european beer in a pilsner style glass">
+          <img style="width:4em;"src="{{url_for('static', filename='assets/funnycat.jpeg')}}" alt="a funny picture of a cat eating cereal with a pint of beer next time him. The beer is a european beer in a pilsner style glass">
         </svg>
         <div class="card-body bg-dark">
             <h5 class="card-title">Check out this cool picture</h5>

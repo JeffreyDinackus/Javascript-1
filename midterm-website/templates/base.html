@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- this syntax below is called jinga 2 syntax, it is covered in the video in app.py in the first 15 minutes. It is simply syntax. When you have a block, this is a place where you can put stuff into the page on other pages, it is like a varaible. The other pages extend the base.html and will have the content found on base.html as long as they extend them. THe content in the pages extending base.html will be found in the blocks found on base.html. Think of a block like assgigning a varaible. Typically, the content found on base.html is content that will be found on every page, like the navbar and footer. -->
     {% block title %}{% endblock %} {% block head %}{% endblock %}
-    <link rel="shortcut icon" href="{{url_for('static', filename='assets/juicebox.png')}}" />
+    <link
+      rel="shortcut icon"
+      href="{{url_for('static', filename='assets/juicebox.png')}}"
+    />
 
     <!-- this is the link to the bootstrap css file using Flask syntax -->
     <link
@@ -23,117 +26,183 @@
     />
   </head>
   <body>
+    <aside>
       <nav
-      class="navbar navbar-expand-lg navbar-light bg-warning top-sticky"
-      aria-label="Offcanvas navbar large"
-    >
-      <div class="container-fluid">
-        <a class="navbar-brand" href="/"><img class="favicon" src="{{url_for('static', filename='assets/footer-logo.png')}}" alt="a simple logo of my website"></a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasNavbar2"
-          aria-controls="offcanvasNavbar2"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div
-          class="offcanvas offcanvas-end text-bg-warning"
-          tabindex="-1"
-          id="offcanvasNavbar2"
-          aria-labelledby="offcanvasNavbar2Label"
-        >
-          <div class="offcanvas-header">
-            <a href="/" class="nav-link "><h5 class="offcanvas-title text-dark link-styling" id="offcanvasNavbar2Label">
-              Juice Media
-            </h5></a>
-            <button
-              type="button"
-              class="btn-close btn-close-dark"
-              data-bs-dismiss="offcanvas"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="offcanvas-body">
-            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-              <li class="nav-item">
-                <a class="nav-link text-dark link-styling" aria-current="page" href="/">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-dark link-styling" href="/youtube">YouTube</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-dark link-styling" href="/about">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-dark link-styling" href="/registration">Register</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-dark link-styling" href="/login">Login</a>
-              </li>
+        class="navbar navbar-expand-lg navbar-light bg-warning top-sticky"
+        aria-label="Offcanvas navbar large"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/"
+            ><img
+              class="favicon"
+              src="{{url_for('static', filename='assets/footer-logo.png')}}"
+              alt="a simple logo of my website"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar2"
+            aria-controls="offcanvasNavbar2"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="offcanvas offcanvas-end text-bg-warning"
+            tabindex="-1"
+            id="offcanvasNavbar2"
+            aria-labelledby="offcanvasNavbar2Label"
+          >
+            <div class="offcanvas-header">
+              <a href="/" class="nav-link"
+                ><h5
+                  class="offcanvas-title text-dark link-styling"
+                  id="offcanvasNavbar2Label"
+                >
+                  Juice Media
+                </h5></a
+              >
+              <button
+                type="button"
+                class="btn-close btn-close-dark"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                 <li class="nav-item">
-                <a class="nav-link text-dark link-styling" href="/hwlandingpage">Homework</a>
-              </li>
-            </ul>
-            <form class="d-flex mt-3 mt-lg-0" role="search">
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button class="btn btn-dark" type="submit">
-                Search
-              </button>
-            </form>
+                  <a
+                    class="nav-link text-dark link-styling"
+                    aria-current="page"
+                    href="/"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-dark link-styling" href="/youtube"
+                    >YouTube</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-dark link-styling" href="/about"
+                    >About</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link text-dark link-styling"
+                    href="/registration"
+                    >Register</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-dark link-styling" href="/login"
+                    >Login</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link text-dark link-styling"
+                    href="/hwlandingpage"
+                    >Homework</a
+                  >
+                </li>
+              </ul>
+              <form class="d-flex mt-3 mt-lg-0" role="search">
+                <input
+                  class="form-control me-2"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                />
+                <button class="btn btn-dark" type="submit">Search</button>
+              </form>
+            </div>
           </div>
         </div>
+      </nav>
+      {% block content %} {% endblock %}
+      <hr class="opacity-75" />
+      <div class="mx-4">
+        <footer
+          class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4"
+        >
+          <p class="col-md-4 mb-0 text-light">&copy; 2023 Juice Media</p>
+
+          <a
+            href="/"
+            class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none text-light"
+            ><img
+              class="favicon"
+              src="{{url_for('static', filename='assets/footer-logo.png')}}"
+              alt="a simple logo of my website of the initals JMD"
+            />
+            <svg class="bi me-2" width="40" height="32">
+              <use xlink:href="#bootstrap" />
+            </svg>
+          </a>
+
+          <ul class="nav col-md-4 justify-content-end">
+            <li class="nav-item">
+              <a href="/" class="nav-link px-2 text-light link-styling">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="/youtube" class="nav-link px-2 text-light link-styling"
+                >YouTube</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="/about" class="nav-link px-2 text-light link-styling"
+                >About</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                href="/registration"
+                class="nav-link px-2 text-light link-styling"
+                >Registration</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="/login" class="nav-link px-2 text-light link-styling"
+                >Login</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="/homework" class="nav-link px-2 text-light link-styling"
+                >Homework</a
+              >
+            </li>
+            <!-- SM buttons go here -->
+            <a href="/externalyoutube"
+              ><img
+                src="{{url_for('static', filename='assets/youtube.png')}}"
+                align="middle"
+                class="smbutton me-3"
+            /></a>
+            <a href="/externaltelegram"
+              ><img
+                src="{{url_for('static', filename='assets/telegram.png')}}"
+                align="middle"
+                class="smbutton me-4"
+            /></a>
+            <a href="/externaltwitter"
+              ><img
+                src="{{url_for('static', filename='assets/twitter.png')}}"
+                align="middle"
+                class="smbutton me-3"
+            /></a>
+            <a href="/externalreddit"
+              ><img
+                src="{{url_for('static', filename='assets/reddit.png')}}"
+                align="middle"
+                class="smbutton me-3"
+            /></a>
+          </ul>
+        </footer>
       </div>
-    </nav>
-    {% block content %} {% endblock %}
-    <hr class="opacity-75" /><div class="mx-4">
-      <footer
-        class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4"
-      >
-      
-        <p class="col-md-4 mb-0 text-light">&copy; 2023 Juice Media</p>
-
-        <a
-          href="/"
-          class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none text-light"
-          ><img class="favicon" src="{{url_for('static', filename='assets/footer-logo.png')}}" alt="a simple logo of my website of the initals JMD">
-          <svg class="bi me-2" width="40" height="32">
-            <use xlink:href="#bootstrap" />
-          </svg>
-        </a>
-
-        <ul class="nav col-md-4 justify-content-end">
-          <li class="nav-item">
-            <a href="/" class="nav-link px-2 text-light link-styling">Home</a>
-          </li>
-          <li class="nav-item">
-            <a href="/youtube" class="nav-link px-2 text-light link-styling">YouTube</a>
-          </li>
-          <li class="nav-item">
-            <a href="/about" class="nav-link px-2 text-light link-styling">About</a>
-          </li>
-          <li class="nav-item">
-            <a href="/registration" class="nav-link px-2 text-light link-styling">Registration</a>
-          </li>
-          <li class="nav-item">
-            <a href="/login" class="nav-link px-2 text-light link-styling">Login</a>
-          </li>
-          <li class="nav-item">
-            <a href="/homework" class="nav-link px-2 text-light link-styling">Homework</a>
-          </li>
-          <!-- SM buttons go here -->
-          <a href="/externalyoutube"><img src="{{url_for('static', filename='assets/youtube.png')}}" align="middle" class="smbutton me-3" /></a>
-          <a href="/externaltelegram"><img src="{{url_for('static', filename='assets/telegram.png')}}" align="middle" class="smbutton me-4" /></a>
-          <a href="/externaltwitter"><img src="{{url_for('static', filename='assets/twitter.png')}}" align="middle" class="smbutton me-3" /></a>
-          <a href="/externalreddit"><img src="{{url_for('static', filename='assets/reddit.png')}}" align="middle" class="smbutton me-3" /></a>
-      </footer>
-    </div>
+    </aside>
     <script src="{{url_for('static', filename='scripts/jquery_3.6.3.js')}}"></script>
     <script
       type="text/javascript"
