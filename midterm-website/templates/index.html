@@ -5,19 +5,21 @@
   <!-- IN RESPONSE TO HTML VALIDATION ERRORS: -->
   <!-- for these errors with the closing tag added to void elements, it is because of prettier and I keep deleting them but it keeps adding them. It is because Prettier is a opinionated formatter. After this experience, I will not be using it again and I believe it should be deprecated. So, please ignore these errors. -->
 
-  <!-- these HTML in foreign namespace errors, it is a problem with the SVG tag, this is more complicated than I am able to solve. I believe it is a error with the validator and these posters seem to think so too. For more info: https://github.com/validator/validator/issues/156-->
+  <!-- these HTML in foreign namespace errors, it is a problem with the SVG tag, this is more complicated than I am able to solve. I believe it is a error with the validator and these posters seem to think so too. This is because of Masonry, and how it is built to run. For more info: https://github.com/validator/validator/issues/156-->
 
-  <!--VALIDATION CHECKERS:-->
+  <!-- OTHER VALIDATION CHECKERS:-->
 
   <!-- for the accessibility validators, I looked up why accessabilitychecker is not working, and it is probably a AWS problem. HTTP is allowed through my security group. Aside from that, I could not find much information about why this problem was occuring. https://www.accessibilitychecker.org/ -->
 
-  <!-- for the other one, accessible web, they want too much information and I am not comfortable giving it to them. The signup process is too lengthy for a quick scan. https://accessibleweb.com/website-accessibility-checker/ -->
+  <!-- Accessible web did also not work for me, it gives the error, Could not verify script installation. Please visit your website to ensure it's properly installed and activated. This could be because I am running over Port 8080, or because of AWS, or because of flask, I cannot verify ownership of the website through associated Email with the domain or DNS because I have neither of those. It's probably a AWS issue or because it runs on port 8080. It's not possible to run my Flask server over port 80 at this time, as by default it is reserved for Apache and it's a whole big thing. My security group allows HTTP, HTTPS, and SSH over IPv4 and IPv6.
+ https://accessibleweb.com/website-accessibility-checker/ -->
 
   <!-- for HTML validation, I used the W3C checker, and I resolved most of the errors. https://validator.w3.org/ My resonses to the remaining errors found above. -->
 
   <!-- My code successfully validated with https://codebeautify.org/cssvalidate however there were some errors with some of the boilerplate, specifically the <!DOCTYPE html> <html lang="en"> lines. However, I looked up the correct syntax and it is correct. I believe this is a problem with the validator. https://www.w3.org/International/questions/qa-html-language-declarations I did not use the W3 validator because it appears not to work with bootstrap or bootstrap masonry(the library used for the homepage). This thread may be relevant: https://stackoverflow.com/questions/57661659/w3c-css-validation-parse-error-on-variables My website also has very little CSS. It is now fully validated with CSS through the codebeautify link except for the error mentioned in this paragraph. -->
 
   <!-- for javascript I used https://codebeautify.org/jsvalidate and it validated successfully. the 	Expected '(end)' and instead saw ' appears to be erroneous. It may because of Flask/Jinga2 -->
+
   <!-- for my colors and being accessible, I did it manually before the midterms using https://webaim.org/resources/contrastchecker/ and it checked out. I actually changed a lot of my coloring to make it accessible. -->
 
 <!-- masthead -->
