@@ -1,0 +1,244 @@
+{% extends 'base.html' %} {% block title %} <title>Assignment 4</title>{%
+endblock %}{% block head %}<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='homework/css/assignment4.css') }}"
+/>
+{% endblock %} {% block content %}
+<div class="container my-5">
+  <form name="frm">
+    <input name="result" class="calc" />
+    <br />
+    <!-- this calculator adds numbers by using the run function and the onclick event. It also uses the eval function to evaluate the string. The clearit function clears the input field. The runplus, runTimes, runExponent, runMinus, and runDivide functions add the appropriate operator to the input field. -->
+    <input
+      name="1"
+      class="btn btn-success"
+      type="button"
+      value="1"
+      onClick="run(1)"
+    />
+    <input
+      name="2"
+      class="btn btn-success"
+      type="button"
+      value="2"
+      onClick="run(2)"
+    />
+    <input
+      name="3"
+      class="btn btn-success"
+      type="button"
+      value="3"
+      onClick="run(3)"
+    />
+    <input
+      type="button"
+      class="btn btn-danger"
+      name="times"
+      value="*"
+      onClick="runTimes()"
+    />
+    <input
+      type="button"
+      class="btn btn-danger"
+      name="exponent"
+      value="**"
+      onClick="runExponent()"
+    />
+    <input
+      type="button"
+      class="btn btn-danger"
+      name="exponent"
+      value="^2"
+      onClick="runSquare()"
+    />
+    <input
+      type="button"
+      class="btn btn-danger"
+      name="exponent"
+      value="sqrt"
+      onClick="runSquareRoot()"
+    />
+    <br />
+    <input
+      name="4"
+      class="btn btn-success"
+      type="button"
+      value="4"
+      onClick="run(4)"
+    />
+    <input
+      name="5"
+      class="btn btn-success"
+      type="button"
+      value="5"
+      onClick="run(5)"
+    />
+    <input
+      name="6"
+      class="btn btn-success"
+      type="button"
+      value="6"
+      onClick="run(6)"
+    />
+    <input
+      class="btn btn-danger"
+      type="button"
+      name="minus"
+      value="-"
+      onClick="runMinus()"
+    />
+    <input
+      class="btn btn-danger"
+      type="button"
+      name="divide"
+      value="/"
+      onClick="runDivide()"
+    />
+    <input
+      class="btn btn-danger"
+      type="button"
+      name="divide"
+      value="pi"
+      onClick="pi()"
+    />
+    <input
+      class="btn btn-danger"
+      type="button"
+      name="divide"
+      value="base10"
+      onClick="runbase10()"
+    />
+    <br />
+
+    <input
+      name="7"
+      class="btn btn-success"
+      type="button"
+      value="7"
+      onClick="run(7)"
+    />
+    <input
+      name="8"
+      class="btn btn-success"
+      type="button"
+      value="8"
+      onClick="run(8)"
+    />
+    <input
+      name="9"
+      class="btn btn-success"
+      type="button"
+      value="9"
+      onClick="run(9)"
+    />
+
+    <input
+      class="btn btn-danger"
+      type="button"
+      name="plus"
+      value="+"
+      onClick="runplus()"
+    />
+
+    <input
+      class="btn btn-danger"
+      type="button"
+      name="calc"
+      value="="
+      onClick="evalu()"
+    />
+    <input
+      class="btn btn-danger"
+      type="button"
+      name="calc"
+      value="A/C"
+      onClick="clearit()"
+    />
+    <input
+      class="btn btn-danger"
+      type="button"
+      name="calc"
+      value="base8"
+      onClick="runbase8()"
+    />
+    <br />
+    <input
+      name="0"
+      class="btn btn-success"
+      type="button"
+      value="0"
+      onClick="run(0)"
+    />
+  </form>
+
+  <script>
+    let base10orbase8 = 10;
+    //I don't know exactly what this button should do as by default the number is base 10. I suppose nothing.
+    function runbase10() {
+      i = frm.result.value;
+      console.log(base10orbase8);
+      if (base10orbase8 == 8) {
+        //set to base 10 only if it's base 8
+        x = parseInt(i, 8).toString(10);
+        frm.result.value = x;
+        base10orbase8 = 10;
+      }
+    }
+    //this function uses parseint to convert the string to an integer and then uses the toString function to convert the integer to a string in base 8.
+    function runbase8() {
+      i = frm.result.value;
+      console.log(base10orbase8);
+      if (base10orbase8 == 10) {
+        //set to base 8
+        x = parseInt(i).toString(8);
+        frm.result.value = x;
+        base10orbase8 = 8;
+      }
+    }
+
+    //these functions are pretty self explanatory, they mostly just add to the string in the input field according to their function. The pi function adds 3.14 to the string.
+    function run(x) {
+      frm.result.value += x;
+    }
+    function runSquare() {
+      frm.result.value += '**2';
+    }
+    function runSquareRoot() {
+      frm.result.value += '**0.5';
+    }
+    function runplus() {
+      frm.result.value += '+';
+    }
+    function pi() {
+      frm.result.value += '3.14';
+    }
+    function runTimes() {
+      frm.result.value += '*';
+    }
+    function runExponent() {
+      frm.result.value += '**';
+    }
+    function runMinus() {
+      frm.result.value += '-';
+    }
+    function runDivide() {
+      frm.result.value += '/';
+    }
+
+    //this function evaluates the string and displays the result
+    function evalu() {
+      //it's not perfect but in a basic way it works
+      var evalo = eval(frm.result.value);
+
+      frm.result.value = evalo;
+    }
+    //this function clears the input field
+    function clearit() {
+      frm.result.value = '';
+    }
+  </script>
+</div>
+{% endblock %} {% block scripts %}
+<script src="{{url_for('static', filename='homework/scripts/what-does-this-do.js')}}"></script>
+<script src="{{url_for('static', filename='homework/scripts/assignment4.js')}}"></script>
+{% endblock %}

@@ -57,9 +57,19 @@ def assignment2():
 def assignment3():
     return render_template('assignment3.html')
 
-@app.route('/assignment4')
-def assignment4():
-    return render_template('assignment4.html')
+@app.route('/assignment4calculator')
+def assignment4calculator():
+    return render_template('assignment4calculator.html')
+
+@app.route('/assignment4clock')
+def assignment4clock():
+    return render_template('assignment4clock.html') 
+
+@app.route('/assignment4colorchanger')
+def assignment4colorchanger():
+    return render_template('assignment4colorchanger.html') 
+
+#assignment4.html is not able to be loaded by the user because it has no route. I did not delete it because I may need it for something. 
 
 @app.route('/extracredit1')
 def extracredit1():
