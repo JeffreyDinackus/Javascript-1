@@ -33,3 +33,9 @@ hr {
 .favicon {
   width: 3rem;
 }
+
+@media (max-width: 480px) {
+  .hidden_mobile {
+    display: none;
+  }
+}
