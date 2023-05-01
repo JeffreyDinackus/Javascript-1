@@ -4,6 +4,7 @@ from flask import Flask, render_template, redirect
 #the commented out stuff is code I would use if I want a database later
 # from flask_sqlalchemy import SQLAlchemy
 
+
 app = Flask(__name__)
 #ignore the database stuff unless I actually implement a database
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'sqllite:///testdb.db'
