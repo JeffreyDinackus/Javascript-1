@@ -11,7 +11,7 @@ block head %} {% endblock %} {% block content %}
     class="mx-5 mt-5"
   >
     <div class="mb-3">
-      <label for="email" class="form-label"
+      <label for="email" id="email-label" class="form-label"
         >Emter the email you signed up with:
       </label>
       <input
@@ -19,7 +19,7 @@ block head %} {% endblock %} {% block content %}
         class="form-control color-for-form"
         id="email"
         name="email"
-        aria-describedby="emailHelp"
+        aria-describedby="email-label"
         required
       />
     </div>
