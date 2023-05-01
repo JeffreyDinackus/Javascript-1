@@ -23,7 +23,8 @@
     <div class="mb-3">
       <label for="email" class="form-label">Email address</label>
       <input
-        type="text"
+        type="email"
+        pattern=".+@*\.+"
         class="form-control color-for-form"
         id="email"
         name="email"
@@ -37,7 +38,8 @@
     <div class="mb-3">
       <label for="email2" class="form-label">Enter your email again</label>
       <input
-        type="text"
+        type="email"
+        pattern=".+@*\.+"
         class="form-control color-for-form"
         id="email2"
         name="email2"
@@ -46,6 +48,7 @@
     </div>
     <div class="mb-3">
       <label for="passwd" class="form-label">Enter a Secure Password</label>
+      <!-- password is not starred out so the user can check their password -->
       <input
         type="text"
         class="form-control color-for-form"

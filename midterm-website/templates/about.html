@@ -65,7 +65,8 @@
     <div class="mb-3">
       <label for="email" class="form-label">Email address</label>
       <input
-        type="text"
+        type="email"
+        pattern=".+@*\.+"
         class="form-control color-for-form"
         id="email"
         name="email"
@@ -109,7 +110,7 @@
         form don&apos;t actually put your credit card
       </label>
       <input
-        type="text"
+        type="number"
         name="credit-card"
         class="form-control color-for-form"
         id="credit-card"
@@ -167,6 +168,7 @@
       <input
         type="text"
         name="cc-code"
+        maxlength="5"
         class="form-control color-for-form"
         id="cc-code"
       />

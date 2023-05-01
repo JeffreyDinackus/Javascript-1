@@ -6,7 +6,10 @@ endblock %}{% block head %}<link
 {% endblock %} {% block content %}
 <div class="container my-5">
   <form name="frm">
-    <input name="result" class="calc" />
+    <!--this is the code I tried to run, it does not work. It's not a huge deal they have to remember to not put letters in the calculator, they can always refresh the page if they enter a lot of them.
+    <input type="text" pattern="[0-9!@#$%^&*()_+={}|[\]\\;:,.<>/?-]" >-->
+    
+    <input type="text" name="result" class="calc"/>
     <br />
     <!-- this calculator adds numbers by using the run function and the onclick event. It also uses the eval function to evaluate the string. The clearit function clears the input field. The runplus, runTimes, runExponent, runMinus, and runDivide functions add the appropriate operator to the input field. -->
     <input

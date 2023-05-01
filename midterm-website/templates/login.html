@@ -15,10 +15,11 @@ block head %} {% endblock %} {% block content %}
         >Emter the email you signed up with:
       </label>
       <input
-        type="text"
+        type="email"
         class="form-control color-for-form"
         id="email"
         name="email"
+        pattern=".+@*\.+"
         aria-describedby="email-label"
         required
       />
@@ -26,7 +27,7 @@ block head %} {% endblock %} {% block content %}
     <div class="mb-3">
       <label for="passwd" class="form-label">Enter your Password: </label>
       <input
-        type="text"
+        type="password"
         class="form-control color-for-form"
         id="passwd"
         name="passwd"
