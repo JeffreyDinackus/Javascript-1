@@ -127,6 +127,94 @@ if (mode.toLowerCase() == "ftc") {
   throw new Error("Wrong input for type");
 }
 
+function currency(){
+    type = prompt(
+    'Choose the option you want:\nUSD to 3 currencies type \"USDto3\"\n3 currencies to USD type \"3toUSD\"\nEUR to 3 currencies type \"EURto3\"\n3 currencies to EUR type \"3toEUR\"\n'
+  );
+  switch(type.toLowerCase()) {
+  case "usdto3":
+    amnt = prompt("Enter a amount of USD");
+    cur1 = prompt("Enter a first currency name");
+    exchange1 = prompt("Enter a first currency exchange rate");
+    cur1final = +amnt * +exchange1;
+
+    cur2 = prompt("Enter a second currency name");
+    exchange2 = prompt("Enter a second currency exchange rate");
+    cur2final = +amnt * +exchange2;
+
+    cur3 = prompt("Enter a third currency name");
+    exchange3 = prompt("Enter a third currency exchange rate");
+    cur3final = +amnt * +exchange3;
+
+
+    alert(`USD: ${amnt}\n${cur1}: ${cur1final}\n${cur2}: ${cur2final}\n${cur3}: ${cur3final}`);
+    break;
+  case "3tousd":
+    cur1 = prompt("Enter a first currency to be exchanged into USD");
+    exchange1 = prompt(`Enter a exchange rate for ${cur1}`);
+    amount1 = prompt(`Enter a amount of currency for ${cur1}`);
+    cur1final = +amount1 * +exchange1;
+
+    cur2 = prompt("Enter a second currency to be exchanged into USD");
+    exchange2 = prompt(`Enter a exchange rate for ${cur2}`);
+    amount2 = prompt(`Enter a amount of currency for ${cur2}`);
+    cur2final = +amount2 * +exchange2;
+
+    cur3 = prompt("Enter a third currency to be exchanged into USD");
+    exchange3 = prompt(`Enter a exchange rate for ${cur3}`);
+    amount3 = prompt(`Enter a amount of currency for ${cur3}`);
+    cur3final = +amount3 * +exchange3;
+
+    alert(`${cur1}: ${amount1} = USD: ${cur1final}\n${cur2}: ${amount2} = USD: ${cur2final}\n${cur3}: ${amount3} = USD: ${cur3final}$`);
+
+
+    break;
+  case "eurto3":
+    amnt = prompt("Enter a amount of EUR");
+    cur1 = prompt("Enter a first currency name");
+    exchange1 = prompt("Enter a first currency exchange rate");
+    cur1final = +amnt * +exchange1;
+
+
+    cur2 = prompt("Enter a second currency name");
+    exchange2 = prompt("Enter a second currency exchange rate");
+    cur2final = +amnt * +exchange2;
+
+    cur3 = prompt("Enter a third currency name");
+    exchange3 = prompt("Enter a third currency exchange rate");
+    cur3final = +amnt * +exchange3;
+
+
+    alert(`EUR: ${amnt}\n${cur1}: ${cur1final}\n${cur2}: ${cur2final}\n${cur3}: ${cur3final}`);
+    break;
+
+
+
+  case "3toeur":
+    cur1 = prompt("Enter a first currency to be exchanged into EUR");
+    exchange1 = prompt(`Enter a exchange rate for ${cur1}`);
+    amount1 = prompt(`Enter a amount of currency for ${cur1}`);
+    cur1final = +amount1 * +exchange1;
+
+    cur2 = prompt("Enter a second currency to be exchanged into EUR");
+    exchange2 = prompt(`Enter a exchange rate for ${cur2}`);
+    amount2 = prompt(`Enter a amount of currency for ${cur2}`);
+    cur2final = +amount2 * +exchange2;
+
+    cur3 = prompt("Enter a third currency to be exchanged into EUR");
+    exchange3 = prompt(`Enter a exchange rate for ${cur3}`);
+    amount3 = prompt(`Enter a amount of currency for ${cur3}`);
+    cur3final = +amount3 * +exchange3;
+
+    alert(`${cur1}: ${amount1} = EUR: ${cur1final}\n${cur2}: ${amount2} = EUR: ${cur2final}\n${cur3}: ${amount3} = EUR: ${cur3final}$`);
+
+    break;
+  default:
+    alert("Enter a value exactly next time");
+}
+}
+
+
 // Exercise 4**: Currency Converter
 // 4a. Three (3) currencies to USD & vice versa [1.5 points each conversion => 9 points]
 
