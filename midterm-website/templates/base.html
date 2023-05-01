@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- for these errors with the closing tag added to void elements, it is because of prettier and I keep deleting them but it keeps adding them. It is because Prettier is a opinionated formatter. After this experience, I will not be using it again and I believe it should be deprecated. So, please forgive these errors. -->
+    <meta charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <!-- this syntax below is called jinga 2 syntax, it is covered in the video in app.py in the first 15 minutes. It is simply syntax. When you have a block, this is a place where you can put stuff into the page on other pages, it is like a varaible. The other pages extend the base.html and will have the content found on base.html as long as they extend them. THe content in the pages extending base.html will be found in the blocks found on base.html. Think of a block like assgigning a varaible. Typically, the content found on base.html is content that will be found on every page, like the navbar and footer. -->
     {% block title %}{% endblock %} {% block head %}{% endblock %}
     <link
@@ -176,30 +177,32 @@
             </li>
             <!-- SM buttons go here -->
             <!-- prettier is too opinionated for HTML and caused me many validation errors, like half of them are because of it. It should be deprecated -->
-            <a href="/externalyoutube"
+            </li><a href="/externalyoutube"
               ><img
                 src="{{url_for('static', filename='assets/youtube.png')}}"
                 alt="a simple logo of youtube"
                 class="smbutton me-3"
-            /></a>
+            ></a><li>
+            <li>
             <a href="/externaltelegram"
               ><img
                 src="{{url_for('static', filename='assets/telegram.png')}}"
                 alt="a simple logo of telegram"
                 class="smbutton me-4"
-            /></a>
+            ></a></li>
+            <li>
             <a href="/externaltwitter"
               ><img
                 src="{{url_for('static', filename='assets/twitter.png')}}"
                 alt="a simple logo of twitter"
                 class="smbutton me-3"
-            /></a>
-            <a href="/externalreddit"
+            ></a></li>
+            <li><a href="/externalreddit"
               ><img
                 src="{{url_for('static', filename='assets/reddit.png')}}"
                 alt="a simple logo of reddit"
                 class="smbutton me-3"
-            /></a>
+            ></a></li>
           </ul>
         </footer>
       </div>
