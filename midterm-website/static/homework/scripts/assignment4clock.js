@@ -33,16 +33,3 @@ function twelveHourClock() {
   document.getElementById('clock2').style.font = 'italic bold 20px arial,serif';
 }
 
-function run(x) {
-  frm.result.value += x;
-}
-
-function runplus() {
-  frm.result.value += '+';
-}
-
-function evalu() {
-  let evalo = eval(frm.result.value);
-
-  frm.result.value = evalo;
-}
