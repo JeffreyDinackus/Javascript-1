@@ -7,8 +7,8 @@ endblock %}{% block head %}
 <div class="container my-5">
   <h1>Password Generator Helper</h1>
 <!-- a flaw of this program is that it only updates on keystroke, in production it would have to be changed-->
-  <form action="" method="">
-    <label for="password"
+  <form action="#">
+    <label for="psw"
       >This input box will tell you if you have made a strong password based on
       a criteria.</label
     ><br />
@@ -29,7 +29,7 @@ endblock %}{% block head %}
     <p id="number" class="invalid">A number</p>
     <p id="length" class="invalid">Minimum 8 characters</p>
   </div>
-  <button class="btn btn-primary mt-3" onclick="generatePasswd()" type="button"">
+  <button class="btn btn-primary mt-3" onclick="generatePasswd()" type="button">
     Make a password for me!
   </button>
   <button class="btn btn-primary mt-3" type="button" onclick="customPasswd()">
