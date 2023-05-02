@@ -3,7 +3,7 @@
 {% endblock %} {% block head %} {% endblock %} {% block content %}
 
   <!-- IN RESPONSE TO HTML VALIDATION ERRORS: -->
-  <!-- for these errors with the closing tag added to void elements, it is because of prettier and I keep deleting them but it keeps adding them. It is because Prettier is a opinionated formatter. After this experience, I will not be using it again and I believe it should be deprecated. So, please ignore these errors. -->
+  <!-- Info: Trailing slash on void elements has no effect and interacts badly with unquoted attribute values. for these errors with the closing tag added to void elements, it is because of prettier and I keep deleting them but it keeps adding them. It is because Prettier is a opinionated formatter. After this experience, I will not be using it again for HTML. So, please ignore these errors. It would be time consuming to delete all of the slashes. -->
 
   <!-- these HTML in foreign namespace errors, it is a problem with the SVG tag, this is more complicated than I am able to solve. I believe it is a error with the validator and these posters seem to think so too. This is because of Masonry, and how it is built to run. For more info: https://github.com/validator/validator/issues/156-->
 
