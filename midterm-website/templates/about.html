@@ -1,16 +1,10 @@
 {% extends 'base.html' %} {% block title %} <title>About JMD</title>{% endblock
 %}{% block head %} 
+  
+  
   <script src="{{url_for('static', filename='scripts/jquery_3.6.3.js')}}"></script>
   <script src="{{url_for('static', filename='scripts/jquery_ui_1.13.2.js')}}"></script>
-  <script>
-  $( function() {
-    $( "#accordion" ).accordion();
-  } );
-    $( function() {
-    $( "input" ).checkboxradio();
-  } );
-  </script>
-
+  <script src="{{url_for('static', filename='homework/scripts/about.js')}}"></script>
 {% endblock %} {% block content %}
 
 <div class="container">
