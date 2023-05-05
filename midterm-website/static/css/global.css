@@ -34,8 +34,18 @@ hr {
   width: 3rem;
 }
 
-@media (max-width: 480px) {
-  .hidden_mobile {
+@media (max-width: 500px) {
+  .hidden-mobile {
     display: none;
+  }
+}
+
+.mobile-show {
+  display: none;
+}
+
+@media (max-width: 500px) {
+  .mobile-show {
+    display: block;
   }
 }

@@ -2,6 +2,23 @@
 <title>Juice Media</title>
 {% endblock %} {% block head %} {% endblock %} {% block content %}
 
+  <!--I have made the revisions to my website following your instructions from class on Saturday.
+
+Some things I did include:
+
+- Added a media query for the masthead on the homepage, hiding it for mobile users and another media query to get feedback from mobile users at the bottom of the index page. Besides the masthead, most features are fine on mobile. 
+- Added some input validation for email addresses and some fields that should only be numbers, such as the credit card and credit card code. For the calculator, I could not find a solution, and explained what I did in a comment. 
+- Validated for HTML, CSS, and Javascript. Remaining errors were explained in the comments. I know my colors are accessible because I compared them manually and changed my colors before the midterm. 
+- The accessibility checkers did not work for me, I explained why I think so in the comments on the index page. If you have a fix, please let me know.
+- Separated assignment 4 into 3 pages.
+- Added blog posts to homework pages.
+
+The comments explaining my remaining validation errors are on the index page of my website. 
+
+https://github.com/JeffreyDinackus/Javascript-1/blob/main/midterm-website/templates/index.html
+
+If there's anything I need to do, please let me know. I do not see any homework page on the canvas for midterm revisions. Please let me know what work is due for the final and for the powerpoint. -->
+
   <!-- IN RESPONSE TO HTML VALIDATION ERRORS: -->
   <!-- Info: Trailing slash on void elements has no effect and interacts badly with unquoted attribute values. for these errors with the closing tag added to void elements, it is because of prettier and I keep deleting them but it keeps adding them. It is because Prettier is a opinionated formatter. After this experience, I will not be using it again for HTML. So, please ignore these errors. It would be time consuming to delete all of the slashes. -->
 
@@ -206,9 +223,7 @@
         </div>
       </div>
     </div>
-    <!-- these breaks solve a bug with the masthead and Masonry, the masonry elements were getting bunched up so I gave them some extra room. For some reason they were adding it themselves-->
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <div class="col-sm-6 col-lg-4 mb-4">
+        <div class="col-sm-6 col-lg-4 mb-4">
       <div class="card text-bg-info text-center p-3">
         <figure class="mb-0">
           <blockquote class="blockquote">
@@ -220,14 +235,20 @@
         </figure>
       </div>
     </div>
+
+    <br><br><br><br><br><br><br><br><br>
     
   </div>
 </div>
 
 
- <br><br><br><br>
-<h1 class="text-center my-5">Find The Lord</h1>
 
+<h1 class="text-center my-5">Find The Lord</h1>
+<div class="container">
+
+<!-- this is a media query using bootstrap that only shows on mobile devices -->
+<p class="mobile-show"><a class="link-styling"href="/about">Mobile users: please give feedback on the website by clicking this text and filling out the form at the bottom of the page.</a></p>
+</div>
 {% endblock %} {% block scripts %}
 <script src="{{url_for('static', filename='scripts/masonry.js')}}"></script>
 
