@@ -9,7 +9,7 @@ function login(){
   passwd = document.getElementsByName("passwd")[0].value;
   loginattempts += 1;
   if (email == "admin@admin.com" && passwd == "panicatthedisco" && loginattempts < 3){
-    // window.location.href = "";
+    window.location.href = `http://127.0.0.1:5000/?email=${email}&passwd=${passwd}`;
   }
   if (email != "admin@admin.com " || passwd != "panicatthedisco"){
     document.getElementById("output-for-login").innerHTML = "Incorrect email or password!";

@@ -2,6 +2,8 @@
 <title>Juice Media</title>
 {% endblock %} {% block head %} {% endblock %} {% block content %}
 
+<!-- IMPORTANT, if you get the error with the bunched up masonry cards, refresh the page or try to use Chrome instead. -->
+
   <!--I have made the revisions to my website following your instructions from class on Saturday.
 
 Some things I did include:
@@ -65,7 +67,8 @@ If there's anything I need to do, please let me know. I do not see any homework 
 
 <h1 class="text-center my-5">Juice Media Distributed</h1>
 
-
+<!-- this is the tag used for the login info from the user.-->
+<h3 id="loggedinas" class="text-center my-3">You are not logged in</h3>
 <!-- this is a javascript library called masonry, it is used to make the cards look nice and algin them. you can find information here: https://getbootstrap.com/docs/5.0/examples/masonry/-->
 <!-- some of these validator remarks seem to be false positives, I am not sure why. -->
 <div class="container">
@@ -230,6 +233,8 @@ If there's anything I need to do, please let me know. I do not see any homework 
         </div>
       </div>
     </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
         <div class="col-sm-6 col-lg-4 mb-4">
       <div class="card text-bg-info text-center p-3">
         <figure class="mb-0">
@@ -242,8 +247,6 @@ If there's anything I need to do, please let me know. I do not see any homework 
         </figure>
       </div>
     </div>
-
-    <br><br><br><br><br><br><br><br><br>
     
   </div>
 </div>
@@ -258,5 +261,6 @@ If there's anything I need to do, please let me know. I do not see any homework 
 </div>
 {% endblock %} {% block scripts %}
 <script src="{{url_for('static', filename='scripts/masonry.js')}}"></script>
+<script src="{{url_for('static', filename='homework/scripts/homepage.js')}}"></script>
 
 {% endblock %}
