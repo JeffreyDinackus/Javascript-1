@@ -1,5 +1,17 @@
 {% extends 'base.html' %} {% block title %} <title>About JMD</title>{% endblock
-%}{% block head %} {% endblock %} {% block content %}
+%}{% block head %} 
+  <script src="{{url_for('static', filename='scripts/jquery_3.6.3.js')}}"></script>
+  <script src="{{url_for('static', filename='scripts/jquery_ui_1.13.2.js')}}"></script>
+  <script>
+  $( function() {
+    $( "#accordion" ).accordion();
+  } );
+    $( function() {
+    $( "input" ).checkboxradio();
+  } );
+  </script>
+
+{% endblock %} {% block content %}
 
 <div class="container">
   <h1 class="text-center my-5">About us</h1>
@@ -17,41 +29,42 @@
 <hr class="opacity-75" />
 <h1 class="text-center my-5">FAQ &ndash; Frequently Asked Questions</h1>
 <div class="container">
+
+  <div id="accordion">
   <h3>Question 1: Who is Juice Media Distributed?</h3>
-  <p>
+  <div>
+    <p>
     I&apos;m just a hacker with ethics all my own... jk that&apos;s the definition of a
     gray hat hacker.
-  </p>
-  <hr class="opacity-75" />
+    </p>
+  </div>
+
   <h3>Question 2: Why did you make this website?</h3>
+  <div>
   <p>
     I want people to know the things that have been shown to me and this seemed
     like a efficient way to do this.
-  </p>
-  <hr class="opacity-75" />
-  <h3>Question 3: What&apos;s the #1 thing I can do to change my life?</h3>
+  </p></div>
+
+  <h3>Question 3: What&apos;s the #1 thing I can do to change my life?</h3><div>
   <p>
     It is written that if you manage what little you have well, more will be
-    given.
-  </p>
-  <p>
-    When God does something nice for you, give him credit instead of claiming
-    credit for yourself.
-  </p>
-  <p>
-    Work hard and learn and go the extra mile. After a while you&apos;ll get your
-    break. Start small but keep making steay progress.
-  </p>
-  <hr class="opacity-75" />
-  <h3>Question 4: Will more content be added?</h3>
+    given. When God does something nice for you, give him credit instead of claiming
+    credit for yourself. Work hard and learn and go the extra mile. After a while you&apos;ll get your
+    break. Start small but keep making steady progress.
+  </p></div>
+  
+  <h3>Question 4: Will more content be added?</h3><div>
   <p>
     It&apos;s much more likely that it will if I get viewers and it&apos;s making the
     difference. Show your friends and love ones.
-  </p>
+  </p></div>
+</div>
 </div>
 <hr class="opacity-75" />
 <div class="container">
   <h1 class="text-center my-5">Contact us below:</h1>
+  <p class="text-center">Please be aware that this form was made for practice, it is not actually hook up and submissions will not be sent anywhere. </p>
   <form method="post" action="#" id="form" class="mx-5 mt-5">
     <div class="mb-3">
       <label for="name" class="form-label">Full name</label>
@@ -66,7 +79,7 @@
       <label for="email" class="form-label">Email address</label>
       <input
         type="email"
-        pattern=".+@*\.+"
+        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
         class="form-control color-for-form"
         id="email"
         name="email"
@@ -173,6 +186,22 @@
         id="cc-code"
       />
     </div>
+<div class="widget"> 
+  <fieldset>
+    <legend>Give us a rating: </legend>
+    <input type="radio" name="radio-1" id="radio-1">
+    <label for="radio-1">1 star</label>
+    <input type="radio" name="radio-1" id="radio-2">
+    <label for="radio-2">2 star</label>
+    <input type="radio" name="radio-1" id="radio-3">
+    <label for="radio-3">3 star</label>
+    <input type="radio" name="radio-1" id="radio-4">    
+    <label for="radio-4">4 star</label>
+    <input type="radio" name="radio-1" id="radio-5">
+    <label for="radio-5">5 star</label>
+  </fieldset>
+  </div>
+ 
     <p>
       This is a form that does not work, I made it for pactice. If you press
       submit you may get a error because it has nowhere to send the form, or a

@@ -5,9 +5,7 @@ block head %} {% endblock %} {% block content %}
 <div class="container">
   <h1 class="text-center my-5">Login here</h1>
   <form
-    method="post"
-    action="mailto:example@exmaple.com"
-    id="form"
+    id="myForm"
     class="mx-5 mt-5"
   >
     <div class="mb-3">
@@ -19,7 +17,7 @@ block head %} {% endblock %} {% block content %}
         class="form-control color-for-form"
         id="email"
         name="email"
-        pattern=".+@*\.+"
+        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
         aria-describedby="email-label"
         required
       />
@@ -39,9 +37,10 @@ block head %} {% endblock %} {% block content %}
       submit you may get a error because it has nowhere to send the form, or a
       email application may open.
     </p>
+    <div id="output-for-login" class="my-2"></div>
     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-      <button type="submit" class="btn btn-danger text-end mb-5">Submit</button>
+      <button onclick="login()" class="btn btn-danger text-end mb-5">Submit</button>
     </div>
-  </form>
 </div>
-{% endblock %} {% block scripts %} {% endblock %}
+{% endblock %} {% block scripts %} <script src="{{url_for('static', filename='homework/scripts/login.js')}}"></script>
+{% endblock %}
