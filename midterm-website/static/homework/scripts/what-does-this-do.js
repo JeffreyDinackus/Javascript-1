@@ -1,4 +1,6 @@
 //Professor Manuel, this is a easter egg/puzzle. My question for you is what does this code do?
+//It is from a obfuscation website.
+
 
 function _0x3df0(_0x13d40c, _0x3933aa) {
   var _0x3bb4b9 = _0x3bb4();
