@@ -8,7 +8,7 @@ function digitalClock() {
   setTimeout(digitalClock, 1000);
   document.getElementById('clock').style.font = 'italic bold 20px arial,serif';
 }
-
+//in future updates there may be one clock instead of two.
 function twelveHourClock() {
   //get the date object
   var date = new Date();
